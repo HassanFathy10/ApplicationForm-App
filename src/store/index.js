@@ -3,6 +3,6 @@ import questions from './questionSlice'
 
 export default configureStore({
     reducer: {
-        questions
+        questions,
     },
 })
