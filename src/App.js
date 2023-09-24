@@ -1,14 +1,17 @@
 import { Fragment } from 'react';
-import { Container } from 'react-bootstrap';
-import SideBar from './Component/SideBar';
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row } from 'react-bootstrap';
+import SideBar from './Component/SideBar/SideBar';
+import Form from './Component/Form/Form';
 
 
 function App() {
   return (
     <Fragment>
       <Container>
-        <SideBar />
+        <Row>
+          <SideBar />
+          <Form />
+        </Row>
       </Container>
     </Fragment>
   );
