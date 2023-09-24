@@ -1,9 +1,0 @@
-.sidebar {
-    max-width: 200px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    margin-left: 40px;
-}

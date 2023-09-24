@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Col } from 'react-bootstrap';
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './styles.module.css';
+import AddQuestionForm from './AddQuestionForm';
 
 
 export default function PersonalForm() {
@@ -135,11 +136,11 @@ export default function PersonalForm() {
                     </article>
 
                     <article >
-                        <button type='button' className='fw-bold' onClick={toggleForm}>
-                            <Unicons.UilPlus color='#32CD32' /> {isActive ? 'Add a question' : 'Hide a question'}
-                        </button>
+                        <p type='button' className='fw-bold mt-4' onClick={toggleForm}>
+                            <Unicons.UilPlus color='#32CD32' /> {isActive ? 'Hide a question' : 'Add a question'}
+                        </p>
                         {isActive && (
-                            <div></div>
+                            <AddQuestionForm />
                         )}
                     </article>
                 </article>

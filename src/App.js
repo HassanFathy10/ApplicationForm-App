@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import SideBar from './Component/SideBar/SideBar';
+import { Container, Row } from 'react-bootstrap';
 import Form from './Component/Form/Form';
 
 
@@ -9,9 +8,6 @@ function App() {
     <Fragment>
       <Container>
         <Row>
-          <Col md={2} id="sidebar">
-            <SideBar />
-          </Col>
             <Form />
         </Row>
       </Container>
