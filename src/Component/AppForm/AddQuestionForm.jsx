@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import DropDown from './TypeForms/DropDown';
 
 export default function AddQuestionForm() {
     const [typeQuestion, setTypeQuestions] = useState('');
@@ -32,7 +33,7 @@ export default function AddQuestionForm() {
                                 {typeQuestion === '1' && (<p className='p-5 fs-1'>asdsad</p>)}
                                 {typeQuestion === '2' && (<p className='p-5 fs-1'>ad</p>)}
                                 {typeQuestion === '3' && (<p className='p-5 fs-1'>asdsad</p>)}
-                                {typeQuestion === '4' && (<p className='p-5 fs-1'>asdsad</p>)}
+                                {typeQuestion === '4' && (<DropDown />)}
                                 {typeQuestion === '5' && (<p className='p-5 fs-1'>asdsad</p>)}
                                 {typeQuestion === '6' && (<p className='p-5 fs-1'>asdsad</p>)}
                                 {typeQuestion === '7' && (<p className='p-5 fs-1'>asdsad</p>)}

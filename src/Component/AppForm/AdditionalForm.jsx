@@ -13,9 +13,9 @@ export default function AdditionalForm() {
     return (
         <Col md={10} className='pt-5'>
             <article className='col-sm-10'>
-                <article class="card shadow">
+                <article className="card shadow">
                     <h5 className="card-header bg-info">Additional questions</h5>
-                    <article class="card-body">
+                    <article className="card-body">
                         <article className="form-group mb-2">
                             <article className='d-flex'>
                                 <label className='form-label fw-light mb-1' htmlFor="exampleFormControlTextarea1">Paragraph</label>
@@ -38,14 +38,14 @@ export default function AdditionalForm() {
                         </article>
                         <article className="form-group mb-2">
                             <article className='mb-2'>
-                                <label className='fw-bolder mb-2' htmlFor="number">Question</label>
-                                <input type="text" className="form-control border-3 w-100 p-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type Here" />
+                                <label className='fw-bolder mb-2' htmlFor="text">Question</label>
+                                <input type="text" className="form-control border-3 w-75 p-3" placeholder="Type Here" />
                             </article>
                             <article className='mb-2'>
-                                <label className='fw-bolder mb-2 ms-5' htmlFor="number">Chioce</label>
+                                <label className='fw-bolder mb-2 ms-5' htmlFor="text">Chioce</label>
                                 <article className='d-flex'>
                                     <span className='p-3' type="button"><Unicons.UilListUl /></span>
-                                    <span className=' w-75'><input type="text" className="form-control border-3 p-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type Here" /></span>
+                                    <span className=' w-75'><input type="text" className="form-control border-3 p-3" placeholder="Type Here" /></span>
                                     <span className='p-3' type="button"><Unicons.UilPlus /></span>
                                 </article>
                             </article>
