@@ -2,7 +2,7 @@ import React from 'react';
 import * as Unicons from '@iconscout/react-unicons';
 
 
-export default function Paragraph() {
+export default function ShortAnswer() {
     return (
         <article>
             <article className='mt-3'>

@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import DropDown from './TypeForms/DropDown';
+import Paragraph from './TypeForms/Paragraph';
+import YesNoForm from './TypeForms/YesNoForm';
+import ShortAnswer from './TypeForms/ShortAnswer';
 
 export default function AddQuestionForm() {
     const [typeQuestion, setTypeQuestions] = useState('');
@@ -14,13 +17,13 @@ export default function AddQuestionForm() {
     return (
         <article className='mt-4'>
             <article className="card shadow">
-                <h5 className="card-header text-black fw-bolder bg-info">Featured</h5>
+                <h5 className="card-header text-black fw-bolder bg-info">Questions</h5>
                 <article className="card-body">
                     <h6 className="card-title fw-bolder">Type</h6>
                     <select className="form-select" onChange={HandleSelectType} defaultValue="" aria-label="Default select example">
                         <option value="">Type Here</option>
                         <option value="1">Paragraph</option>
-                        <option value="2">Short answer</option>
+                        <option value="2">Short Answer</option>
                         <option value="3">Yes/No</option>
                         <option value="4">Dropdown</option>
                         <option value="5">Number</option>
@@ -30,9 +33,9 @@ export default function AddQuestionForm() {
                     <article>
                         {showCard && (
                             <article>
-                                {typeQuestion === '1' && (<p className='p-5 fs-1'>asdsad</p>)}
-                                {typeQuestion === '2' && (<p className='p-5 fs-1'>ad</p>)}
-                                {typeQuestion === '3' && (<p className='p-5 fs-1'>asdsad</p>)}
+                                {typeQuestion === '1' && (<Paragraph />)}
+                                {typeQuestion === '2' && (<ShortAnswer />)}
+                                {typeQuestion === '3' && (<YesNoForm />)}
                                 {typeQuestion === '4' && (<DropDown />)}
                                 {typeQuestion === '5' && (<p className='p-5 fs-1'>asdsad</p>)}
                                 {typeQuestion === '6' && (<p className='p-5 fs-1'>asdsad</p>)}

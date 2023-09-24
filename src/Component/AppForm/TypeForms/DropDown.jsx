@@ -23,8 +23,8 @@ export default function DropDown() {
                         </label>
                     </article>
                     <article className='mt-3'>
-                        <label className='fw-bolder mb-2' htmlFor="number">Max choice allowed</label>
-                        <input type="number" className="form-control border-3 w-100 p-3" placeholder="Enter number of choice allowed here" />
+                        <label className='fw-bolder mb-2' htmlFor="text">Max choice allowed</label>
+                        <input type="text" className="form-control border-3 w-100 p-3" placeholder="Enter number of choice allowed here" />
                     </article>
                 </article>
                 <article className='d-flex mt-4'>
