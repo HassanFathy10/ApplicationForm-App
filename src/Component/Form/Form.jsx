@@ -27,8 +27,8 @@ export default function Form() {
             </article>
             <article className='col-lg-10 col-md-10 col-sm-10 mt-5 '>
                 <article className='col-lg-10 col-md-10 col-sm-10 mt-5 p-2 w-100  shadow'>
-                    <Nav  variant="pills" >
-                    <Nav.Item className={`p-3 ${Styles.link}`}>
+                    <Nav variant="pills" >
+                        <Nav.Item className={`p-3 ${Styles.link}`}>
                             <Nav.Link href="#home">Program Details</Nav.Link>
                         </Nav.Item>
                         <Nav.Item className={`p-3 ${Styles.link}`}>
