@@ -69,7 +69,7 @@ export default function ProfileForm() {
                                     <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
                                 </article>
                             </article>
-                            <input type="file" placeholder="Enter your Nationality" />
+                            <input className=' fw-medium mt-3' type="file" placeholder="Enter your Nationality" />
                         </article>
                         <article>
                             <span type='button' className='fw-bold mt-4' style={{ color: '#228B22' }} onClick={questionForm}>

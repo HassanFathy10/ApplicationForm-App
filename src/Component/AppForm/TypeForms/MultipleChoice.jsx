@@ -1,7 +1,8 @@
 import React from 'react';
 import * as Unicons from '@iconscout/react-unicons';
 
-export default function DropDown() {
+
+export default function MultipleChoice() {
     return (
         <article className='card-body'>
             <article className="form-group mb-2">
@@ -21,6 +22,10 @@ export default function DropDown() {
                         <label className="form-check-label fw-medium" htmlFor="flexCheckDefault">
                             Enable “Other” option
                         </label>
+                    </article>
+                    <article className='mt-3'>
+                        <label className='fw-bolder mb-2' htmlFor="text">Max choice allowed</label>
+                        <input type="text" className="form-control border-3 w-100 p-3" placeholder="Enter number of choice allowed here" />
                     </article>
                 </article>
                 <article className='d-flex mt-4'>
