@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 import { Col } from 'react-bootstrap';
 import * as Unicons from '@iconscout/react-unicons';
-import Styles from './styles.module.css';
 import AddQuestionForm from './AddQuestionForm';
+import Styles from './styles.module.css';
+
 
 
 export default function PersonalForm() {
     const [isActive, setIsActive] = useState(false);
 
-    const toggleForm = () => {
+    const questionForm = () => {
         setIsActive(!isActive);
     };
     return (
@@ -18,7 +19,7 @@ export default function PersonalForm() {
                 <article className="card-body text-start">
                     <article className="form-group mb-2">
                         <label className='fw-bolder mb-1' htmlFor="text">First Name</label>
-                        <input type="text" className={Styles.input} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your First name" />
+                        <input type="text" className={Styles.input} placeholder="Enter your First name" />
                     </article>
 
                     <article className="form-group mb-2">
@@ -50,7 +51,7 @@ export default function PersonalForm() {
 
                     <article className="form-group mb-2">
                         <article className='d-flex'>
-                            <label className='fw-bolder mb-1' htmlFor="number">Nationality</label>
+                            <label className='fw-bolder mb-1' htmlFor="text">Nationality</label>
                             <article className="form-check ms-auto">
                                 <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                 <label className="form-check-label fw-medium" htmlFor="flexCheckDefault">
@@ -62,7 +63,7 @@ export default function PersonalForm() {
                                 <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
                             </article>
                         </article>
-                        <input type="email" className={Styles.input} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Nationality" />
+                        <input type="text" className={Styles.input} placeholder="Enter your Nationality" />
                     </article>
 
                     <article className="form-group mb-2">
@@ -79,7 +80,7 @@ export default function PersonalForm() {
                                 <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
                             </article>
                         </article>
-                        <input type="text" className={Styles.input} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Current Residence" />
+                        <input type="text" className={Styles.input} placeholder="Enter your Current Residence" />
                     </article>
 
                     <article className="form-group mb-2">
@@ -96,7 +97,7 @@ export default function PersonalForm() {
                                 <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
                             </article>
                         </article>
-                        <input type="number" className={Styles.input} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your ID Number" />
+                        <input type="number" className={Styles.input} placeholder="Enter your ID Number" />
                     </article>
 
                     <article className="form-group mb-2">
@@ -113,12 +114,12 @@ export default function PersonalForm() {
                                 <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
                             </article>
                         </article>
-                        <input type="date" className={Styles.input} id="exampleInputEmail1" aria-describedby="emailHelp" />
+                        <input type="date" className={Styles.input} />
                     </article>
 
                     <article className="form-group mb-2">
                         <article className='d-flex'>
-                            <label className='fw-bolder mb-1' htmlFor="number">Gender</label>
+                            <label className='fw-bolder mb-1' htmlFor="text">Gender</label>
                             <article className="form-check ms-auto">
                                 <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                 <label className="form-check-label fw-medium" htmlFor="flexCheckDefault">
@@ -130,13 +131,13 @@ export default function PersonalForm() {
                                 <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
                             </article>
                         </article>
-                        <input type="number" className={Styles.input} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your First Name" />
+                        <input type="text" className={Styles.input} placeholder="Enter your First Name" />
                     </article>
-
+                    
                     <article >
-                        <p type='button' className='fw-bold mt-4' onClick={toggleForm}>
-                            <Unicons.UilPlus color='#32CD32' /> {isActive ? 'Hide a question' : 'Add a question'}
-                        </p>
+                        <span type='button' className='fw-bold mt-4' style={{ color :'#228B22'}} onClick={questionForm}>
+                            <Unicons.UilPlus color='#228B22' /> {isActive ? 'Hide a question' : 'Add a question'}
+                        </span>
                         {isActive && (
                             <AddQuestionForm />
                         )}

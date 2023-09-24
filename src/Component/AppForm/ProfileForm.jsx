@@ -52,7 +52,7 @@ export default function ProfileForm() {
                                     <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">{btnActive ? 'Show' : 'Hide'}</label>
                                 </article>
                             </article>
-                            <input type="number" className={Styles.input} id="exampleInputEmail1" aria-describedby="emailHelp"  />
+                            <input type="number" className={Styles.input} id="exampleInputEmail1" aria-describedby="emailHelp" />
                         </article>
 
                         <article className="form-group mb-2">
@@ -71,14 +71,14 @@ export default function ProfileForm() {
                             </article>
                             <input type="file" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Nationality" />
                         </article>
-                        <article >
-                        <p type='button' className='fw-bold mt-4' onClick={questionForm }>
-                            <Unicons.UilPlus color='#32CD32' /> {isActive ? 'Hide a question' : 'Add a question'}
-                        </p>
-                        {isActive && (
-                            <AddQuestionForm />
-                        )}
-                    </article>
+                        <article>
+                            <span type='button' className='fw-bold mt-4' style={{ color: '#228B22' }} onClick={questionForm}>
+                                <Unicons.UilPlus color='#228B22' /> {isActive ? 'Hide a question' : 'Add a question'}
+                            </span>
+                            {isActive && (
+                                <AddQuestionForm />
+                            )}
+                        </article>
                     </article>
                 </article>
             </article>
