@@ -14,7 +14,7 @@ export default function PersonalForm() {
         <Col md={10} className='pt-5'>
             <article className="card col-sm-10 shadow">
                 <article className="card-header bg-info">
-                    <span className=' text-light'>Personal Information</span>
+                    <span className='text-black fs-5 fw-bolder'>Personal Information</span>
                 </article>
                 <article className="card-body text-start">
                     <article className="form-group mb-2">

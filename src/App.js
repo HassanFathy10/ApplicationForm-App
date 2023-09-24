@@ -12,9 +12,7 @@ function App() {
           <Col md={2} id="sidebar">
             <SideBar />
           </Col>
-          <Col md={10}>
             <Form />
-          </Col>
         </Row>
       </Container>
     </Fragment>
