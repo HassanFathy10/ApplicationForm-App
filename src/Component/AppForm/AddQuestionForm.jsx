@@ -3,7 +3,9 @@ import Paragraph from './TypeForms/Paragraph';
 import ShortAnswer from './TypeForms/ShortAnswer';
 import YesNoForm from './TypeForms/YesNoForm';
 import DropDown from './TypeForms/DropDown';
+import Date from './TypeForms/Date';
 import Number from './TypeForms/Number';
+import FileUpload from './TypeForms/FileUpload';
 
 export default function AddQuestionForm() {
     const [typeQuestion, setTypeQuestions] = useState('');
@@ -27,9 +29,10 @@ export default function AddQuestionForm() {
                         <option value="2">Short Answer</option>
                         <option value="3">Yes/No</option>
                         <option value="4">Dropdown</option>
-                        <option value="5">Number</option>
-                        <option value="6">File upload</option>
-                        <option value="7">Video question</option>
+                        <option value="5">Date</option>
+                        <option value="6">Number</option>
+                        <option value="7">File upload</option>
+                        <option value="8">Video question</option>
                     </select>
                     <article>
                         {showCard && (
@@ -38,9 +41,10 @@ export default function AddQuestionForm() {
                                 {typeQuestion === '2' && (<ShortAnswer />)}
                                 {typeQuestion === '3' && (<YesNoForm />)}
                                 {typeQuestion === '4' && (<DropDown />)}
-                                {typeQuestion === '5' && (<Number />)}
-                                {typeQuestion === '6' && (<p className='p-5 fs-1'>asdsad</p>)}
-                                {typeQuestion === '7' && (<p className='p-5 fs-1'>asdsad</p>)}
+                                {typeQuestion === '5' && (<Date />)}
+                                {typeQuestion === '6' && (<Number />)}
+                                {typeQuestion === '7' && (<FileUpload />)}
+                                {typeQuestion === '8' && (<p className='p-5 fs-1'>asdsad</p>)}
                             </article>
                         )}
                     </article>

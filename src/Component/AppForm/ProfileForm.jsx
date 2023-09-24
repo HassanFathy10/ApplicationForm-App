@@ -52,7 +52,7 @@ export default function ProfileForm() {
                                     <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">{btnActive ? 'Show' : 'Hide'}</label>
                                 </article>
                             </article>
-                            <input type="number" className={Styles.input} id="exampleInputEmail1" aria-describedby="emailHelp" />
+                            <input type="number" className={Styles.input} />
                         </article>
 
                         <article className="form-group mb-2">
