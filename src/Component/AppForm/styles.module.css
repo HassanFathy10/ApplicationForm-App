@@ -1,3 +1,4 @@
+/* photo form*/
 .sidebar {
     display: flex;
     justify-content: center;
@@ -20,3 +21,21 @@
     margin: 10px auto;
     position: relative;
 }
+.inputfile {
+    margin: 0;
+    font-family: inherit;
+    font-size: small !important;
+    line-height: inherit;
+}
+
+/* personal form */
+
+.input {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.233);
+    width: 100%;
+}
+.input:focus {
+    outline: none;
+}
+

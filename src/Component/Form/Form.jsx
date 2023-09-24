@@ -10,20 +10,22 @@ import PersonalForm from '../AppForm/PersonalForm';
 export default function Form() {
 
     return (
-        <article className='col-lg-10 col-md-10 col-sm-10 mt-5 p-4'>
-            <Tabs
-                defaultActiveKey="home"
-                transition={false}
-                id="noanim-tab-example"
-                className="mb-3"
-            >
-                <Tab eventKey="home" title="Home">
-                </Tab>
-                <Tab eventKey="profile" title="Profile">
-                </Tab>
-                <Tab eventKey="contact" title="Contact">
-                </Tab>
-            </Tabs>
+        <article>
+            <article className='col-lg-10 col-md-10 col-sm-10 mt-5 p-4 shadow'>
+                <Tabs
+                    defaultActiveKey="home"
+                    transition={false}
+                    id="noanim-tab-example"
+                    className="mb-3"
+                >
+                    <Tab eventKey="home" title="Home">
+                    </Tab>
+                    <Tab eventKey="profile" title="Profile">
+                    </Tab>
+                    <Tab eventKey="contact" title="Contact">
+                    </Tab>
+                </Tabs>
+            </article>
             <article>
                 <PhotoForm />
                 <PersonalForm />
