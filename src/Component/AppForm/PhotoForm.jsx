@@ -30,9 +30,7 @@ export default function PhotoForm() {
             <article className='row pt-5'>
                 <article className='col-sm-10'>
                     <article className='card text-start shadow'>
-                        <article className='card-header bg-info'>
-                            <span className='text-black fs-5 fw-bolder'>Upload cover image</span>
-                        </article>
+                        <h5 className="card-header text-black fw-bolder bg-info">Personal Information</h5>
                         <article className='card-body text-center'>
                             <form className={Styles.upload}>
                                 <input

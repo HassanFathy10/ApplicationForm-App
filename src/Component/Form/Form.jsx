@@ -7,6 +7,7 @@ import PersonalForm from '../AppForm/PersonalForm';
 import * as Unicons from '@iconscout/react-unicons';
 
 import { Nav} from 'react-bootstrap';
+import ProfileForm from '../AppForm/ProfileForm';
 
 
 export default function Form() {
@@ -45,6 +46,7 @@ export default function Form() {
                 <article className='p-5'>
                     <PhotoForm />
                     <PersonalForm />
+                    <ProfileForm />
                 </article>
             </article>
         </article>
