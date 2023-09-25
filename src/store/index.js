@@ -1,8 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit'
-import questions from './questionSlice'
+import { configureStore } from '@reduxjs/toolkit';
+import applicationFormReducer from './ApplicationFormSlice';
 
-export default configureStore({
+const store = configureStore({
     reducer: {
-        questions,
+        applicationForm: applicationFormReducer,
     },
-})
+});
+
+export default store;
+
+

@@ -3,6 +3,7 @@ import { Col } from 'react-bootstrap';
 import AddQuestionForm from './AddQuestionForm';
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './styles.module.css';
+import ApplicationForm from '../ApplicationForm';
 
 
 export default function ProfileForm() {
@@ -69,14 +70,17 @@ export default function ProfileForm() {
                                     <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
                                 </article>
                             </article>
-                            <input className=' fw-medium mt-3' type="file" placeholder="Enter your Nationality" />
+                            <input className='fw-medium mt-3' type="file" />
                         </article>
                         <article>
                             <span type='button' className='fw-bold mt-4' style={{ color: '#228B22' }} onClick={questionForm}>
                                 <Unicons.UilPlus color='#228B22' /> {isActive ? 'Hide a question' : 'Add a question'}
                             </span>
                             {isActive && (
+                                <article>
                                 <AddQuestionForm />
+                                <ApplicationForm version="1.0" programId="123" />
+                                </article>
                             )}
                         </article>
                     </article>
