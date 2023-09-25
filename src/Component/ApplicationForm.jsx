@@ -1,38 +1,33 @@
-import React, { useEffect ,useState } from 'react';
+import React, { useEffect  } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getTemplate } from '../store/ApplicationFormSlice';
+import { fetchApplicationForm, getTemplate, updateTemplate } from '../store/ApplicationFormSlice';
 
 const ApplicationForm = () => {
-  const [selectedTemplate, setSelectTemplate] = useState(null);
   const dispatch = useDispatch();
-  const applicationForm = useSelector((state) => state.applicationForm);
-console.log(setSelectTemplate)
+  const { templates, loading, error } = useSelector((state) => state.applicationForm);
+
   useEffect(() => {
-    // Dispatch the fetchApplicationForm action when the component mounts
-    dispatch(getTemplate());
+    // Fetch templates when the component mounts
+    dispatch(fetchApplicationForm());
   }, [dispatch]);
 
-  const getTemplateId = (id) => {
-    const selectedTemplate = applicationForm.find((book) => book.id === id);
-    setSelectTemplate((prev) => {
-      return { ...prev, ...selectedTemplate };
-    });
-
-  };
-  if (applicationForm.loading) {
+  if (loading) {
     return <div>Loading...</div>;
   }
 
-  if (applicationForm.error) {
-    return <div>Error: {applicationForm.error}</div>;
-  }
-
-  if (!applicationForm.data) {
-    return null; 
+  if (error) {
+    return <div>Error: {error}</div>;
   }
 
   return (
-    <div >
+    <div>
+      <h1>Templates</h1>
+      {templates.map((template) => (
+        <div key={template.id}>
+          <p>Template Name: {template.name}</p>
+          {/* Render other template properties here */}
+        </div>
+      ))}
     </div>
   );
 }

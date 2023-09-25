@@ -56,7 +56,7 @@ const applicationFormSlice = createSlice({
         error: null,
     },
     extraReducers: {
-        [fetchApplicationForm.pending]: (state) => {
+        [fetchApplicationForm.pending] : (state) => {
             state.loading = true;
         },
         [fetchApplicationForm.fulfilled]: (state, action) => {
@@ -64,30 +64,30 @@ const applicationFormSlice = createSlice({
             state.data = action.payload;
             state.error = null;
         },
-        [fetchApplicationForm.rejected]: (state, action) => {
+        [fetchApplicationForm.rejected] : (state, action) => {
             state.loading = false;
             state.error = action.error.message;
         },
         // get template
         [getTemplate.pending]: (state) => {
-            state.isLoading = true;
+            state.loading = true;
             state.error = null;
         },
         [getTemplate.fulfilled]: (state, action) => {
-            state.isLoading = false;
+            state.loading = false;
             state.books = action.payload;
         },
         [getTemplate.rejected]: (state, action) => {
-            state.isLoading = false;
+            state.loading = false;
             state.error = action.error.message;
         },
-        //
+        // updateTemplate
         [updateTemplate.pending]: (state) => {
-            state.isLoading = true;
+            state.loading = true;
             state.error = null;
         },
         [updateTemplate.fulfilled]: (state, action) => {
-            state.isLoading = false;
+            state.loading = false;
             state.books = action.payload;
         },
         [updateTemplate.rejected]: (state, action) => {
