@@ -78,8 +78,9 @@ export default function ProfileForm() {
                             </span>
                             {isActive && (
                                 <article>
-                                <AddQuestionForm />
-                                {/* <ApplicationForm version="1.0" programId="123" /> */}
+                                    <AddQuestionForm />
+                                    
+                                    {/* <ApplicationForm /> */}
                                 </article>
                             )}
                         </article>

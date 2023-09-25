@@ -1,16 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect ,useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchApplicationForm } from '../store/ApplicationFormSlice';
+import { getTemplate } from '../store/ApplicationFormSlice';
 
-function ApplicationForm({ version, programId }) {
+const ApplicationForm = () => {
+  const [selectedTemplate, setSelectTemplate] = useState(null);
   const dispatch = useDispatch();
   const applicationForm = useSelector((state) => state.applicationForm);
-
+console.log(setSelectTemplate)
   useEffect(() => {
     // Dispatch the fetchApplicationForm action when the component mounts
-    dispatch(fetchApplicationForm({ version, programId }));
-  }, [dispatch, version, programId]);
+    dispatch(getTemplate());
+  }, [dispatch]);
 
+  const getTemplateId = (id) => {
+    const selectedTemplate = applicationForm.find((book) => book.id === id);
+    setSelectTemplate((prev) => {
+      return { ...prev, ...selectedTemplate };
+    });
+
+  };
   if (applicationForm.loading) {
     return <div>Loading...</div>;
   }
@@ -20,18 +28,11 @@ function ApplicationForm({ version, programId }) {
   }
 
   if (!applicationForm.data) {
-    return null; // Data not available yet
+    return null; 
   }
 
-  // Render your form using applicationForm.data
   return (
-    <div>
-      {/* Render your form components here */}
-      <h1>Application Form</h1>
-      <p>Name: {applicationForm.data.attributes.personalInformation.firstName}</p>
-      <p>Last Name: {applicationForm.data.attributes.personalInformation.lastName}</p>
-      <p>Email: {applicationForm.data.attributes.personalInformation.emailId}</p>
-      {/* Add more form fields from the schema as needed */}
+    <div >
     </div>
   );
 }

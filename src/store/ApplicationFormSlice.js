@@ -51,11 +51,10 @@ export const updateTemplate = createAsyncThunk("applicationForm/fetch", async ({
 const applicationFormSlice = createSlice({
     name: 'applicationForm',
     initialState: {
-        data: null,
+        templates: [],
         loading: false,
         error: null,
     },
-    reducers: {},
     extraReducers: {
         [fetchApplicationForm.pending]: (state) => {
             state.loading = true;
@@ -90,7 +89,6 @@ const applicationFormSlice = createSlice({
         [updateTemplate.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.books = action.payload;
-            console.log(action.payload)
         },
         [updateTemplate.rejected]: (state, action) => {
             state.isLoading = false;
