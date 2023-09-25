@@ -3,7 +3,7 @@ import { Col } from 'react-bootstrap';
 import AddQuestionForm from './AddQuestionForm';
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './styles.module.css';
-import ApplicationForm from '../ApplicationForm';
+// import ApplicationForm from '../ApplicationForm';
 
 
 export default function ProfileForm() {
@@ -79,7 +79,7 @@ export default function ProfileForm() {
                             {isActive && (
                                 <article>
                                 <AddQuestionForm />
-                                <ApplicationForm version="1.0" programId="123" />
+                                {/* <ApplicationForm version="1.0" programId="123" /> */}
                                 </article>
                             )}
                         </article>

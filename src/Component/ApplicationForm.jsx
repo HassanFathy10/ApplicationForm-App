@@ -27,10 +27,11 @@ function ApplicationForm({ version, programId }) {
   return (
     <div>
       {/* Render your form components here */}
-      {/* Example: */}
       <h1>Application Form</h1>
-      <p>Name: {applicationForm.data.name}</p>
-      {/* Add more form fields as needed */}
+      <p>Name: {applicationForm.data.attributes.personalInformation.firstName}</p>
+      <p>Last Name: {applicationForm.data.attributes.personalInformation.lastName}</p>
+      <p>Email: {applicationForm.data.attributes.personalInformation.emailId}</p>
+      {/* Add more form fields from the schema as needed */}
     </div>
   );
 }
