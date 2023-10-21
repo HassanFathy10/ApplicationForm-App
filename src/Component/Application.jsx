@@ -2,7 +2,7 @@ import React, { useEffect  } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchApplicationForm, getTemplate, updateTemplate } from '../store/ApplicationFormSlice';
 
-const ApplicationForm = () => {
+const Application = () => {
   const dispatch = useDispatch();
   const { templates, loading, error } = useSelector((state) => state.applicationForm);
 
@@ -32,4 +32,4 @@ const ApplicationForm = () => {
   );
 }
 
-export default ApplicationForm;
+export default Application;
