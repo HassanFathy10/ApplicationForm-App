@@ -9,9 +9,7 @@ export default function ErrorPage() {
                 <h1 className="text-center fw-bolder pt-5 text-info">404</h1>
                 <article className="col-sm-12 d-flex">
                     <article className="col-sm-10 d-flex justify-content-center">
-                        <article className={Styles.image}>
-                                
-                        </article>
+                        <article className={Styles.image} />
                     </article>
                 </article>
             </article>

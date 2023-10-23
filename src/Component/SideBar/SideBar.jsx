@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function programDetails() {
+export default function SideBar() {
   return (
     <div>
       

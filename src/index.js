@@ -8,6 +8,8 @@ import { Provider } from 'react-redux';
 import Store from './store';
 import ErrorPage from './pages/ErrorPage';
 import ApplicationForm from './pages/ApplicationForm';
+import Workflow from './pages/workflow';
+import Preview from './pages/preview';
 
 const router = createBrowserRouter([
   {
@@ -15,7 +17,9 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      {path: '/ApplicationForm', element: <ApplicationForm />}
+      { path: '/ApplicationForm', element: <ApplicationForm /> },
+      { path: '/Workflow', element: <Workflow /> },
+      { path: '/Preview', element: <Preview />}
     ]
   },
 ])
