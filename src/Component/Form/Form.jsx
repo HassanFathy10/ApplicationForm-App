@@ -1,7 +1,7 @@
 import React from 'react'
-import { Nav } from 'react-bootstrap';
+import { Nav, NavItem } from 'react-bootstrap';
 import Styles from './styles.module.css'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Form() {
 
@@ -10,20 +10,28 @@ export default function Form() {
             <article className='row'>
                 <article className='d-flex'>
                     <article className='w-100 mt-5 shadow'>
-                        <article className=' p-2 shadow'>
+                        <article className='p-2 shadow'>
                             <Nav variant="tabs">
-                                <Nav.Item className={`p-3 ${Styles.links}`}>
-                                    <Nav.Link eventKey="link-1"><Link to='/' className={`text-decoration-none fw-bold ${Styles.link}`}>Program Details</Link></Nav.Link>
+                                <Nav.Item className={`p-4 ${Styles.links}`}>
+                                    <NavLink to='/ProgramDetails' className={`text-decoration-none nav-link fw-bold ${Styles.link}`}>
+                                        Program Details
+                                    </NavLink>
                                 </Nav.Item>
-                                <Nav.Item className={`p-3 ${Styles.links}`}>
-                                    <Nav.Link eventKey="link-2"><Link to='/ApplicationForm' className={`text-decoration-none fw-bold ${Styles.link}`}>Application Form</Link></Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item className={`p-3 ${Styles.links}`}>
-                                    <Nav.Link eventKey="link-3"><Link to='/Workflow' className={`text-decoration-none fw-bold ${Styles.link}`}>Workflow</Link></Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item className='p-3'>
-                                    <Nav.Link eventKey="link-4"><Link to='/Preview' className={`text-decoration-none fw-bold ${Styles.link}`}>Preview</Link></Nav.Link>
-                                </Nav.Item>
+                                <NavItem className={`p-4 ${Styles.links}`}>
+                                    <NavLink to='/ApplicationForm' className={`text-decoration-none nav-link fw-bold ${Styles.link}`}>
+                                        Application Form
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem className={`p-4 ${Styles.links}`}>
+                                    <NavLink to='/Workflow' className={`text-decoration-none nav-link fw-bold ${Styles.link}`}>
+                                        Workflow
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem className={`p-4 ${Styles.links}`}>
+                                    <NavLink to='/Preview' className={`text-decoration-none nav-link fw-bold ${Styles.link}`}>
+                                        Preview
+                                    </NavLink>
+                                </NavItem>
                             </Nav>
                         </article>
                     </article>

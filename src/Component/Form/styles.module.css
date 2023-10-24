@@ -18,9 +18,9 @@
     border-right: 0.5px solid rgba(0, 0, 0, 0.089);
 }
 .link {
-    color: #165e74;
+    color: #2366e4;
 }
-.links:hover {
-    background-color: #6dc51b;
-}
+/* .links:hover {
+    background-color: #0c90b12d;
+} */
 

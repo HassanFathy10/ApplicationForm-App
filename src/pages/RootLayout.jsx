@@ -10,10 +10,10 @@ function RootLayout() {
     <Fragment>
       <Container fluid>
         <Row>
-          <Col sm={1}>
+          <Col sm={2}>
             <SideBar />
           </Col>
-          <Col sm={11}>
+          <Col sm={10}>
             <Form />
             <Outlet />
           </Col>

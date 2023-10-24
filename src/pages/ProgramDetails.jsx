@@ -1,14 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function programDetails() {
   return (
     <article className='container'>
       <article className='row'>
         <article className='pt-5 pb-5 text-start'>
-          <h2 className=''>Program Details :</h2>
-          <p className=''></p>
+          <h3 className='text-decoration-underline text-warning'>Program Details :</h3>
+          <p className='pt-5 lh-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+        <article className='d-flex'>
+          <article className='position-absolute m-5 bottom-0 end-0'>
+            <Link to='/ApplicationForm' className='btn btn-primary'>Next</Link>
+          </article>
+          <article className='position-absolute m-5 bottom-0 start-1'>
+            <Link to='/' className='btn btn-primary'>Previous</Link>
+          </article>
         </article>
       </article>
     </article>
-  )
+  );
 }
