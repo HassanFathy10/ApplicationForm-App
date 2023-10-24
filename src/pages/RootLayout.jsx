@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { Container} from 'react-bootstrap';
+import { Col, Container, Row} from 'react-bootstrap';
 import Form from '../Component/Form/Form';
 import { Outlet } from 'react-router-dom';
 import SideBar from '../Component/SideBar/SideBar';
@@ -8,10 +8,16 @@ import SideBar from '../Component/SideBar/SideBar';
 function RootLayout() {
   return (
     <Fragment>
-      <Container>
-        <SideBar />
-        <Form />
-        <Outlet />
+      <Container fluid>
+        <Row>
+          <Col sm={1}>
+            <SideBar />
+          </Col>
+          <Col sm={11}>
+            <Form />
+            <Outlet />
+          </Col>
+        </Row>
       </Container>
     </Fragment>
   );

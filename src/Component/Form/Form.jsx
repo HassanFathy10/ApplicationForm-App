@@ -9,7 +9,7 @@ export default function Form() {
         <article className='container'>
             <article className='row'>
                 <article className='d-flex'>
-                    <article className='col-lg-10 col-md-10 col-sm-10 w-100 mt-5 shadow'>
+                    <article className='w-100 mt-5 shadow'>
                         <article className=' p-2 shadow'>
                             <Nav variant="pills" >
                                 <Nav.Item className={`p-3 ${Styles.link}`}>
