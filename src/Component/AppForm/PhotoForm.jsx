@@ -12,7 +12,7 @@ export default function PhotoForm() {
     if (file) {
         const reader = new FileReader();
         reader.onload = (e) => {
-        setSelectedImage(e.target.result);
+            setSelectedImage(e.target.result);
         };
         reader.readAsDataURL(file);
     }
@@ -39,6 +39,7 @@ export default function PhotoForm() {
                                     onChange={handleImageUpload}
                                     style={{ display: 'none' }}
                                     ref={fileInputRef}
+                                    className='btn btn-success'
                                 />
                                 {selectedImage ? (
                                     <div className={Styles.preview}>
@@ -51,7 +52,7 @@ export default function PhotoForm() {
                                         <h5 className='card-title'><Unicons.UilUpload /></h5>
                                         <h5 className="card-title">Upload cover image</h5>
                                         <p className="card-text text-black-50">16 : 9 ratio is recommended. Max image size 1mb</p>
-                                        <button className=' btn btn-success' onClick={handleReUploadClick}>Upload Image</button>
+                                        <button className='btn btn-success' onClick={handleReUploadClick}>Upload Image</button>
                                     </>
                                 )}
                             </form>
