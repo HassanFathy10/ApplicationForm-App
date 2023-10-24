@@ -5,6 +5,9 @@ export default function programDetails() {
   return (
     <article className='container'>
       <article className='row'>
+        <article className='pt-5 d-flex justify-content-center position-relative'>
+          <img src='../assets/images/01.png' alt='' />
+        </article>
         <article className='pt-5 pb-5 text-start'>
           <h3 className='text-decoration-underline text-warning'>Program Details :</h3>
           <p className='pt-5 lh-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
