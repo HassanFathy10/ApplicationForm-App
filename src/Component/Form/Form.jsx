@@ -18,13 +18,13 @@ export default function Form() {
                                     </NavLink>
                                 </Nav.Item>
                                 <NavItem className={`p-4 ${Styles.links}`}>
-                                    <NavLink to='/ApplicationForm' className={`text-decoration-none nav-link fw-bold ${Styles.link}`}>
-                                        Application Form
+                                    <NavLink to='/Workflow' className={`text-decoration-none nav-link fw-bold ${Styles.link}`}>
+                                        Workflow
                                     </NavLink>
                                 </NavItem>
                                 <NavItem className={`p-4 ${Styles.links}`}>
-                                    <NavLink to='/Workflow' className={`text-decoration-none nav-link fw-bold ${Styles.link}`}>
-                                        Workflow
+                                    <NavLink to='/ApplicationForm' className={`text-decoration-none nav-link fw-bold ${Styles.link}`}>
+                                        Application Form
                                     </NavLink>
                                 </NavItem>
                                 <NavItem className={`p-4 ${Styles.links}`}>

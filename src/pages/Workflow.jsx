@@ -14,10 +14,10 @@ export default function Workflow() {
         </article>
         <article className='d-flex'>
           <article className='position-absolute m-5 bottom-0 end-0'>
-            <Link to='/Preview' className='btn btn-primary'>Next</Link>
+            <Link to='/ApplicationForm' className='btn btn-primary'>Next</Link>
           </article>
           <article className='position-absolute m-5 bottom-0 start-1'>
-            <Link to='/ApplicationForm' className='btn btn-primary'>Previous</Link>
+            <Link to='/ProgramDetails' className='btn btn-primary'>Previous</Link>
           </article>
         </article>
       </article>

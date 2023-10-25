@@ -14,7 +14,7 @@ export default function programDetails() {
         </article>
         <article className='d-flex'>
           <article className='position-absolute m-5 bottom-0 end-0'>
-            <Link to='/ApplicationForm' className='btn btn-primary'>Next</Link>
+            <Link to='/Workflow' className='btn btn-primary'>Next</Link>
           </article>
           <article className='position-absolute m-5 bottom-0 start-1'>
             <Link to='/' className='btn btn-primary'>Previous</Link>

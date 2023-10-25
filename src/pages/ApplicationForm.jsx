@@ -42,7 +42,7 @@ export default function ApplicationForm() {
                         <Link to={{ pathname: '/preview', state: { ...formData, photoData: formData.photoData }, }} className='btn btn-primary' onClick={handleNextClick}>Next</Link>
                     </article>
                     <article className='position-absolute m-5 bottom-0 start-0'>
-                        <Link to='/ProgramDetails' className='btn btn-primary'>Previous</Link>
+                        <Link to='/Workflow' className='btn btn-primary'>Previous</Link>
                     </article>
                 </article>
             </article>
