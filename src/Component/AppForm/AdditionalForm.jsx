@@ -65,13 +65,14 @@ export default function AdditionalForm() {
                                     <input type="text" className={Styles.input} />
                                 </article>
                             </article>
-                            <article>
+                            <article className='d-grid'>
                                 <span type='button' className='fw-bold mt-4' style={{ color: '#228B22' }} onClick={questionForm}>
                                     <Unicons.UilPlus color='#228B22' /> {isActive ? 'Hide a question' : 'Add a question'}
                                 </span>
                                 {isActive && (
                                     <AddQuestionForm />
                                 )}
+                                <button type='submit' className='btn btn-success mt-2'>Save</button>
                             </article>
                         </article>
                     </article>

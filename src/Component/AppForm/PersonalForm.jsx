@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Col } from 'react-bootstrap';
 import * as Unicons from '@iconscout/react-unicons';
 import AddQuestionForm from './AddQuestionForm';
@@ -6,20 +6,40 @@ import Styles from './styles.module.css';
 
 
 
-export default function PersonalForm() {
+export default function PersonalForm({ formData, setFormData }) {
     const [isActive, setIsActive] = useState(false);
 
     const questionForm = () => {
         setIsActive(!isActive);
     };
+    useEffect(()=>{},[])
+    const handleFirstNameChange = (event) => {
+        const firstName = event.target.value;
+        console.log('First Name:', firstName);
+        // Assuming setFormData is passed as a prop
+        setFormData((prevData) => ({
+            ...prevData,
+            personalData: {
+                ...prevData.personalData,
+                firstName: firstName,
+            },
+        }));
+    };
+
     return (
         <Col md={10} className='pt-5'>
             <article className="card col-sm-10 shadow">
-            <h5 className="card-header text-black fw-bolder bg-info">Personal Information</h5>
-                <article className="card-body text-start">
+                <h5 className="card-header text-black fw-bolder bg-info">Personal Information</h5>
+                <form className="card-body text-start">
                     <article className="form-group mb-2">
                         <label className='fw-bolder mb-1' htmlFor="text">First Name</label>
-                        <input type="text" className={Styles.input} placeholder="Enter your First name" />
+                        <input
+                            type="text"
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleFirstNameChange}
+                            className={Styles.input}
+                            placeholder="Enter your First name" />
                     </article>
 
                     <article className="form-group mb-2">
@@ -134,15 +154,16 @@ export default function PersonalForm() {
                         <input type="text" className={Styles.input} placeholder="Enter your First Name" />
                     </article>
                     
-                    <article >
-                        <span type='button' className='fw-bold mt-4' style={{ color :'#228B22'}} onClick={questionForm}>
+                    <article className='d-grid'>
+                        <span type='button' className='fw-bold mt-4' style={{ color: '#228B22' }} onClick={questionForm}>
                             <Unicons.UilPlus color='#228B22' /> {isActive ? 'Hide a question' : 'Add a question'}
                         </span>
-                        {isActive && (
-                            <AddQuestionForm />
-                        )}
+                            {isActive && (
+                                <AddQuestionForm />
+                            )}
+                            <button type='submit' className='btn btn-success mt-2'>Save</button>
                     </article>
-                </article>
+                </form>
             </article>
         </Col>
     );

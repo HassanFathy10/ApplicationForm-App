@@ -3,9 +3,8 @@ import { Col } from 'react-bootstrap';
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './styles.module.css';
 
-export default function PhotoForm() {
+export default function PhotoForm(props) {
     const [selectedImage, setSelectedImage] = useState(null);
-    const [image, setImage] = useState('')
     const fileInputRef = useRef(null);
 
     const handleImageUpload = (event) => {
@@ -14,14 +13,26 @@ export default function PhotoForm() {
         const reader = new FileReader();
         reader.onload = (e) => {
             setSelectedImage(e.target.result);
+            props.setFormData((prevData) => ({
+                ...prevData,
+                photoData: e.target.result,
+            }));
         };
         reader.readAsDataURL(file);
-    }
+        }
+        console.log('Selected Image:', event.target.result);
+        console.log('FormData PhotoData:', props.formData.photoData);
     };
-    const handleDeleteImage = () => {
+    const handleDeleteImage = (e) => {
         setSelectedImage(null);
+        props.setFormData((prevData) => ({
+            ...prevData,
+            photoData: '',
+        }));
+        console.log('Selected Image:', e.target.result);
+        console.log('FormData PhotoData:', props.formData.photoData);
     };
-    // const 
+
     return (
         <Col md={10}>
             <article className='row pt-5'>

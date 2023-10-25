@@ -72,17 +72,16 @@ export default function ProfileForm() {
                             </article>
                             <input className='fw-medium mt-3' type="file" />
                         </article>
-                        <article>
+                        <article className='d-grid'>
                             <span type='button' className='fw-bold mt-4' style={{ color: '#228B22' }} onClick={questionForm}>
                                 <Unicons.UilPlus color='#228B22' /> {isActive ? 'Hide a question' : 'Add a question'}
                             </span>
                             {isActive && (
                                 <article>
                                     <AddQuestionForm />
-                                    
-                                    {/* <ApplicationForm /> */}
                                 </article>
                             )}
+                            <button type='submit' className='btn btn-success mt-2'>Save</button>
                         </article>
                     </article>
                 </article>
