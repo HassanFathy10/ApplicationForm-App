@@ -5,6 +5,7 @@ import Styles from './styles.module.css';
 
 export default function PhotoForm() {
     const [selectedImage, setSelectedImage] = useState(null);
+    const [image, setImage] = useState('')
     const fileInputRef = useRef(null);
 
     const handleImageUpload = (event) => {
@@ -20,11 +21,7 @@ export default function PhotoForm() {
     const handleDeleteImage = () => {
         setSelectedImage(null);
     };
-    const handleReUploadClick = () => {
-        if (fileInputRef.current) {
-            fileInputRef.current.click();
-        }
-    };
+    // const 
     return (
         <Col md={10}>
             <article className='row pt-5'>
@@ -33,26 +30,38 @@ export default function PhotoForm() {
                         <h5 className="card-header text-black fw-bolder bg-info">Personal Information</h5>
                         <article className='card-body text-center'>
                             <form className={Styles.upload}>
-                                <input
-                                    type="file"
-                                    accept="image/*"
-                                    onChange={handleImageUpload}
-                                    style={{ display: 'none' }}
-                                    ref={fileInputRef}
-                                    className='btn btn-success'
-                                />
                                 {selectedImage ? (
-                                    <div className={Styles.preview}>
+                                    <article className={`d-grid justify-content-center ${Styles.preview}`}>
                                         <img className={Styles.img} src={selectedImage} alt="Preview" />
-                                        <button className=' btn btn-danger m-3' onClick={handleDeleteImage}>Delete</button>
-                                        <button className=' btn btn-success' onClick={handleReUploadClick}>Re-Upload</button>
-                                    </div>
+                                        <button className='btn justify-content-center btn-danger m-3' onClick={handleDeleteImage}>Delete</button>
+                                        <label className='btn btn-success'>
+                                            ReUpload
+                                            <input
+                                                type="file"
+                                                accept="image/*"
+                                                onChange={handleImageUpload}
+                                                style={{ display: 'none' }}
+                                                ref={fileInputRef}
+                                                className='btn'
+                                            />
+                                        </label>
+                                    </article>
                                 ) : (
                                     <>
                                         <h5 className='card-title'><Unicons.UilUpload /></h5>
                                         <h5 className="card-title">Upload cover image</h5>
                                         <p className="card-text text-black-50">16 : 9 ratio is recommended. Max image size 1mb</p>
-                                        <button className='btn btn-success' onClick={handleReUploadClick}>Upload Image</button>
+                                            <label className='btn btn-success'>
+                                                Upload Image
+                                            <input
+                                                type="file"
+                                                accept="image/*"
+                                                onChange={handleImageUpload}
+                                                style={{ display: 'none' }}
+                                                ref={fileInputRef}
+                                                className='btn'
+                                            />
+                                        </label>
                                     </>
                                 )}
                             </form>
