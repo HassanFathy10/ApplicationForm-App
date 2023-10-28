@@ -8,7 +8,11 @@ import AdditionalForm from '../Component/AppForm/AdditionalForm';
 export default function ApplicationForm() {
     const [formData, setFormData] = useState({
         photoData: '',
-        personalData: '',
+        personalData: {
+            firstName: '',
+            lastName: '',
+            email: '',
+        },
         profileData: '',
         additionalData: ''
     });

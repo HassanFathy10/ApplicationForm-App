@@ -13,20 +13,15 @@ export default function PersonalForm({ formData, setFormData }) {
         setIsActive(!isActive);
     };
     useEffect(()=>{},[])
-    const handleFirstNameChange = (event) => {
+    const handleDataChange = (event) => {
         const { name, value } = event.target;
         console.log(`${name}:", ${value}`);
-
-
         // Assuming setFormData is passed as a prop
         setFormData((prevData) => ({
             ...prevData,
             personalData: {
-                ...prevData,
-                personalData: {
-                    ...prevData.personalData,
-                    [name]: value,
-                },
+                ...prevData.personalData,
+                [name]: value,
             }
         }));
     };
@@ -42,7 +37,7 @@ export default function PersonalForm({ formData, setFormData }) {
                             type="text"
                             name="firstName"
                             value={formData.personalData.firstName}
-                            onChange={handleFirstNameChange}
+                            onChange={handleDataChange}
                             className={Styles.input}
                             placeholder="Enter your First name" />
                     </article>
@@ -53,14 +48,20 @@ export default function PersonalForm({ formData, setFormData }) {
                             type="text"
                             name="lastName"
                             value={formData.personalData.lastName}
-                            onChange={handleFirstNameChange}
+                            onChange={handleDataChange}
                             className={Styles.input}
                             placeholder="Enter your Last name" />
                     </article>
 
                     <article className="form-group mb-2">
                         <label className='fw-bolder mb-1' htmlFor="exampleInputEmail1">Email</label>
-                        <input type="email" className={Styles.input} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address" />
+                        <input type="email"
+                            email="email"
+                            value={formData.personalData.email}
+                            onChange={handleDataChange}
+                            className={Styles.input}
+                            aria-describedby="emailHelp"
+                            placeholder="Enter your email address" />
                     </article>
 
                     <article className="form-group mb-2">
