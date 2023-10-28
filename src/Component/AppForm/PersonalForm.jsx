@@ -36,6 +36,7 @@ export default function PersonalForm({ formData, setFormData }) {
                         <input
                             type="text"
                             name="firstName"
+                            id='firstName'
                             value={formData.personalData.firstName}
                             onChange={handleDataChange}
                             className={Styles.input}
@@ -47,6 +48,7 @@ export default function PersonalForm({ formData, setFormData }) {
                         <input
                             type="text"
                             name="lastName"
+                            id='lastName'
                             value={formData.personalData.lastName}
                             onChange={handleDataChange}
                             className={Styles.input}
@@ -55,8 +57,10 @@ export default function PersonalForm({ formData, setFormData }) {
 
                     <article className="form-group mb-2">
                         <label className='fw-bolder mb-1' htmlFor="exampleInputEmail1">Email</label>
-                        <input type="email"
-                            email="email"
+                        <input
+                            type="email"
+                            name="email"
+                            id='email'
                             value={formData.personalData.email}
                             onChange={handleDataChange}
                             className={Styles.input}
@@ -78,7 +82,14 @@ export default function PersonalForm({ formData, setFormData }) {
                                 <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
                             </article>
                         </article>
-                        <input type="number" className={Styles.input} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your phone number" />
+                        <input
+                            type="number"
+                            name="phone"
+                            id="phone"
+                            value={formData.personalData.phone}
+                            onChange={handleDataChange}
+                            className={Styles.input}
+                            placeholder="Enter your phone number" />
                     </article>
 
                     <article className="form-group mb-2">
@@ -95,24 +106,14 @@ export default function PersonalForm({ formData, setFormData }) {
                                 <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
                             </article>
                         </article>
-                        <input type="text" className={Styles.input} placeholder="Enter your Nationality" />
-                    </article>
-
-                    <article className="form-group mb-2">
-                        <article className='d-flex'>
-                            <label className='fw-bolder mb-1' htmlFor="text">Current Residence</label>
-                            <article className="form-check ms-auto">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                <label className="form-check-label fw-medium" htmlFor="flexCheckDefault">
-                                    Internal
-                                </label>
-                            </article>
-                            <article className="form-check form-switch ms-4">
-                                <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-                                <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
-                            </article>
-                        </article>
-                        <input type="text" className={Styles.input} placeholder="Enter your Current Residence" />
+                        <input
+                            type="text"
+                            name="nationality"
+                            id='nationality'
+                            value={formData.personalData.nationality}
+                            onChange={handleDataChange}
+                            className={Styles.input}
+                            placeholder="Enter your Nationality" />
                     </article>
 
                     <article className="form-group mb-2">
@@ -129,7 +130,14 @@ export default function PersonalForm({ formData, setFormData }) {
                                 <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
                             </article>
                         </article>
-                        <input type="number" className={Styles.input} placeholder="Enter your ID Number" />
+                        <input
+                            type="number"
+                            name="idNumber"
+                            id='idNumber'
+                            value={formData.personalData.idNumber}
+                            onChange={handleDataChange}
+                            className={Styles.input}
+                            placeholder="Enter your ID Number" />
                     </article>
 
                     <article className="form-group mb-2">
@@ -146,7 +154,13 @@ export default function PersonalForm({ formData, setFormData }) {
                                 <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
                             </article>
                         </article>
-                        <input type="date" className={Styles.input} />
+                        <input
+                            type="date"
+                            name="dateOfBirth"
+                            id='dateOfBirth'
+                            value={formData.personalData.dateOfBirth}
+                            onChange={handleDataChange}
+                            className={Styles.input} />
                     </article>
 
                     <article className="form-group mb-2">
@@ -163,7 +177,14 @@ export default function PersonalForm({ formData, setFormData }) {
                                 <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
                             </article>
                         </article>
-                        <input type="text" className={Styles.input} placeholder="Enter your First Name" />
+                        <input
+                            type="text"
+                            name="gender"
+                            id='gender'
+                            value={formData.personalData.gender}
+                            onChange={handleDataChange}
+                            className={Styles.input}
+                            placeholder="Enter your Gender" />
                     </article>
                     
                     <article className='d-grid'>
@@ -171,7 +192,7 @@ export default function PersonalForm({ formData, setFormData }) {
                             <Unicons.UilPlus color='#228B22' /> {isActive ? 'Hide a question' : 'Add a question'}
                         </span>
                             {isActive && (
-                                <AddQuestionForm />
+                                <AddQuestionForm formData={formData} setFormData={setFormData} />
                             )}
                             <button type='submit' className='btn btn-success mt-2'>Save</button>
                     </article>

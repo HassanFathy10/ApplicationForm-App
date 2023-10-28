@@ -26,6 +26,11 @@ export default function Preview() {
                     <li className='fw-bold'>First Name: <span className='text-success fw-medium'>{formData?.personalData?.firstName}</span></li>
                     <li className='fw-bold'>Last Name: <span className='text-success fw-medium'>{formData?.personalData?.lastName}</span></li>
                     <li className='fw-bold'>Email: <span className='text-success fw-medium'>{formData?.personalData?.email}</span></li>
+                    <li className='fw-bold'>phone: <span className='text-success fw-medium'>{formData?.personalData?.phone}</span></li>
+                    <li className='fw-bold'>Nationality: <span className='text-success fw-medium'>{formData?.personalData?.nationality}</span></li>
+                    <li className='fw-bold'>Id Number: <span className='text-success fw-medium'>{formData?.personalData?.idNumber}</span></li>
+                    <li className='fw-bold'>Date Of Birth: <span className='text-success fw-medium'>{formData?.personalData?.dateOfBirth}</span></li>
+                    <li className='fw-bold'>Gender: <span className='text-success fw-medium'>{formData?.personalData?.gender}</span></li>
                   </ul>
                 </li>
                 <li className="list-group-item"><p>Profile Data: {formData?.profileData}</p></li>

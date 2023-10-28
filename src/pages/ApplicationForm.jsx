@@ -12,6 +12,11 @@ export default function ApplicationForm() {
             firstName: '',
             lastName: '',
             email: '',
+            phone: '',
+            nationality: '',
+            idNumber: '',
+            dateOfBirth: '',
+            gender: '',
         },
         profileData: '',
         additionalData: ''
