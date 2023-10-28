@@ -56,9 +56,9 @@ export default function AddQuestionForm({ formData, setFormData }) {
                                             <label className='fw-bolder mb-2' htmlFor="text">Question</label>
                                             <input
                                                 type="text"
-                                                name="paragraph"
-                                                id='paragraph'
-                                                value={formData.personalData.paragraph}
+                                                name="question"
+                                                id='question'
+                                                value={formData.personalData.question}
                                                 onChange={handleDataChange}
                                                 className="form-control border-3 w-100 p-3"
                                                 placeholder="Type here" />
@@ -75,9 +75,9 @@ export default function AddQuestionForm({ formData, setFormData }) {
                                             <label className='fw-bolder mb-2' htmlFor="text">Answer</label>
                                             <input
                                                 type="text"
-                                                name="paragraph"
-                                                id='paragraph'
-                                                value={formData.personalData.paragraph}
+                                                name="question"
+                                                id='question'
+                                                value={formData.personalData.question}
                                                 onChange={handleDataChange}
                                                 className="form-control border-3 w-100 p-3"
                                                 placeholder="Type here" />
@@ -92,7 +92,14 @@ export default function AddQuestionForm({ formData, setFormData }) {
                                 {typeQuestion === '3' && (<article>
                                     <article className='mt-3'>
                                         <label className='fw-bolder mb-2' htmlFor="number">Question</label>
-                                        <input type="number" className="form-control border-3 w-100 p-3" placeholder="Type here" />
+                                        <input
+                                            type="text"
+                                            name="question"
+                                            id='question'
+                                            value={formData.personalData.question}
+                                            onChange={handleDataChange}
+                                            className="form-control border-3 w-100 p-3"
+                                            placeholder="Type here" />
                                     </article>
                                     <article className="form-check mt-3">
                                         <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
@@ -110,7 +117,14 @@ export default function AddQuestionForm({ formData, setFormData }) {
                                     <article className="form-group mb-2">
                                         <article className='mb-2'>
                                             <label className='fw-bolder mb-2' htmlFor="number">Question</label>
-                                            <input type="text" className="form-control border-3 w-100 p-3" placeholder="Type Here" />
+                                            <input
+                                                type="text"
+                                                name="question"
+                                                id='question'
+                                                value={formData.personalData.question}
+                                                onChange={handleDataChange}
+                                                className="form-control border-3 w-100 p-3"
+                                                placeholder="Type Here" />
                                         </article>
                                         <article className='mb-2'>
                                             <label className='fw-bolder mb-2 ms-5' htmlFor="number">Chioce</label>
@@ -138,7 +152,14 @@ export default function AddQuestionForm({ formData, setFormData }) {
                                         <article className="form-group mb-2">
                                             <article className='mb-2'>
                                                 <label className='fw-bolder mb-2' htmlFor="number">Question</label>
-                                                <input type="text" className="form-control border-3 w-100 p-3" placeholder="Type Here" />
+                                                <input
+                                                    type="text"
+                                                    name="question"
+                                                    id='question'
+                                                    value={formData.personalData.question}
+                                                    onChange={handleDataChange}
+                                                    className="form-control border-3 w-100 p-3"
+                                                    placeholder="Type Here" />
                                             </article>
                                             <article className='mb-2'>
                                                 <label className='fw-bolder mb-2 ms-5' htmlFor="number">Chioce</label>
@@ -169,7 +190,14 @@ export default function AddQuestionForm({ formData, setFormData }) {
                                     <article>
                                         <article className='mt-3'>
                                             <label className='fw-bolder mb-2' htmlFor="date">Date</label>
-                                            <input type="date" className="form-control border-3 w-100 p-3" placeholder="Type here" />
+                                            <input
+                                                type="date"
+                                                name="question"
+                                                id='question'
+                                                value={formData.personalData.question}
+                                                onChange={handleDataChange}
+                                                className="form-control border-3 w-100 p-3"
+                                                placeholder="Type here" />
                                         </article>
                                         <article className='d-flex mt-4'>
                                             <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
@@ -181,7 +209,14 @@ export default function AddQuestionForm({ formData, setFormData }) {
                                     <article>
                                         <article className='mt-3'>
                                             <label className='fw-bolder mb-2' htmlFor="number">Number</label>
-                                            <input type="number" className="form-control border-3 w-100 p-3" placeholder="Type here" />
+                                            <input
+                                                type="number"
+                                                name="question"
+                                                id='question'
+                                                value={formData.personalData.question}
+                                                onChange={handleDataChange}
+                                                className="form-control border-3 w-100 p-3"
+                                                placeholder="Type here" />
                                         </article>
                                         <article className='d-flex mt-4'>
                                             <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
@@ -193,7 +228,14 @@ export default function AddQuestionForm({ formData, setFormData }) {
                                     <article>
                                         <article className='mt-3'>
                                             <label className='fw-bolder mb-2' htmlFor="file">FileUpload</label>
-                                            <input className='d-flex fw-medium mt-2' type="file" />
+                                            <input
+                                                type="file"
+                                                name="question"
+                                                id='question'
+                                                value={formData.personalData.question}
+                                                onChange={handleDataChange}
+                                                className='d-flex fw-medium mt-2'
+                                                />
                                         </article>
                                         <article className='d-flex mt-4'>
                                             <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>

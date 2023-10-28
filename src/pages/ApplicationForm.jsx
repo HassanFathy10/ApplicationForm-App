@@ -17,14 +17,15 @@ export default function ApplicationForm() {
             idNumber: '',
             dateOfBirth: '',
             gender: '',
-            paragraph: '',
-            shortAnswer: '',
-            yesOrNo: '',
-            dropDown: '',
-            date: '',
-            number: '',
-            fileUpload: '',
-            videoQuestion: ''
+            question: '',
+            // shortAnswer: '',
+            // yesOrNo: '',
+            // dropDown: '',
+            // multipleChoice: '',
+            // date: '',
+            // number: '',
+            // fileUpload: '',
+            // videoQuestion: ''
         },
         profileData: '',
         additionalData: ''
