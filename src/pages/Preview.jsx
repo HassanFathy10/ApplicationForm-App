@@ -31,6 +31,15 @@ export default function Preview() {
                     <li className='fw-bold'>Id Number: <span className='text-success fw-medium'>{formData?.personalData?.idNumber}</span></li>
                     <li className='fw-bold'>Date Of Birth: <span className='text-success fw-medium'>{formData?.personalData?.dateOfBirth}</span></li>
                     <li className='fw-bold'>Gender: <span className='text-success fw-medium'>{formData?.personalData?.gender}</span></li>
+                    <li className='text-decoration-underline fw-bold text-info pb-2 pt-2'>Questions:</li>
+                    <li className='fw-bold'>Paragraph: <span className='text-success fw-medium'>{formData?.personalData?.paragraph}</span></li>
+                    <li className='fw-bold'>Paragraph: <span className='text-success fw-medium'>{formData?.personalData?.shortAnswer}</span></li>
+                    <li className='fw-bold'>Paragraph: <span className='text-success fw-medium'>{formData?.personalData?.yesOrNo}</span></li>
+                    <li className='fw-bold'>Paragraph: <span className='text-success fw-medium'>{formData?.personalData?.dropDown}</span></li>
+                    <li className='fw-bold'>Paragraph: <span className='text-success fw-medium'>{formData?.personalData?.date}</span></li>
+                    <li className='fw-bold'>Paragraph: <span className='text-success fw-medium'>{formData?.personalData?.number}</span></li>
+                    <li className='fw-bold'>Paragraph: <span className='text-success fw-medium'>{formData?.personalData?.fileUpload}</span></li>
+                    <li className='fw-bold'>Paragraph: <span className='text-success fw-medium'>{formData?.personalData?.videoQuestion}</span></li>
                   </ul>
                 </li>
                 <li className="list-group-item"><p>Profile Data: {formData?.profileData}</p></li>

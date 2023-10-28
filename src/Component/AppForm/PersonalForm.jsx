@@ -12,7 +12,6 @@ export default function PersonalForm({ formData, setFormData }) {
     const questionForm = () => {
         setIsActive(!isActive);
     };
-    useEffect(()=>{},[])
     const handleDataChange = (event) => {
         const { name, value } = event.target;
         console.log(`${name}:", ${value}`);
