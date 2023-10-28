@@ -14,15 +14,20 @@ export default function PersonalForm({ formData, setFormData }) {
     };
     useEffect(()=>{},[])
     const handleFirstNameChange = (event) => {
-        const firstName = event.target.value;
-        console.log('First Name:', firstName);
+        const { name, value } = event.target;
+        console.log(`${name}:", ${value}`);
+
+
         // Assuming setFormData is passed as a prop
         setFormData((prevData) => ({
             ...prevData,
             personalData: {
-                ...prevData.personalData,
-                firstName: firstName,
-            },
+                ...prevData,
+                personalData: {
+                    ...prevData.personalData,
+                    [name]: value,
+                },
+            }
         }));
     };
 
@@ -36,7 +41,7 @@ export default function PersonalForm({ formData, setFormData }) {
                         <input
                             type="text"
                             name="firstName"
-                            value={formData.firstName}
+                            value={formData.personalData.firstName}
                             onChange={handleFirstNameChange}
                             className={Styles.input}
                             placeholder="Enter your First name" />
@@ -44,7 +49,13 @@ export default function PersonalForm({ formData, setFormData }) {
 
                     <article className="form-group mb-2">
                         <label className='fw-bolder mb-1' htmlFor="text">Last Name</label>
-                        <input type="text" className={Styles.input} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Last name" />
+                        <input
+                            type="text"
+                            name="lastName"
+                            value={formData.personalData.lastName}
+                            onChange={handleFirstNameChange}
+                            className={Styles.input}
+                            placeholder="Enter your Last name" />
                     </article>
 
                     <article className="form-group mb-2">
