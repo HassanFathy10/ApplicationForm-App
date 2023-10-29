@@ -6,23 +6,11 @@ import Styles from './styles.module.css';
 
 
 
-export default function PersonalForm({ formData, setFormData }) {
+export default function PersonalForm({ formData, setFormData, handleDataChange, errorMessage }) {
     const [isActive, setIsActive] = useState(false);
 
     const questionForm = () => {
         setIsActive(!isActive);
-    };
-    const handleDataChange = (event) => {
-        const { name, value } = event.target;
-        console.log(`${name}:", ${value}`);
-        // Assuming setFormData is passed as a prop
-        setFormData((prevData) => ({
-            ...prevData,
-            personalData: {
-                ...prevData.personalData,
-                [name]: value,
-            }
-        }));
     };
 
     return (
@@ -40,6 +28,7 @@ export default function PersonalForm({ formData, setFormData }) {
                             onChange={handleDataChange}
                             className={Styles.input}
                             placeholder="Enter your First name" />
+                        {errorMessage.firstName && <p style={{ color: 'red' }}>{errorMessage.firstName}</p>}
                     </article>
 
                     <article className="form-group mb-2">
@@ -52,6 +41,7 @@ export default function PersonalForm({ formData, setFormData }) {
                             onChange={handleDataChange}
                             className={Styles.input}
                             placeholder="Enter your Last name" />
+                        {errorMessage.lastName && <p style={{ color: 'red' }}>{errorMessage.lastName}</p>}
                     </article>
 
                     <article className="form-group mb-2">
@@ -65,6 +55,7 @@ export default function PersonalForm({ formData, setFormData }) {
                             className={Styles.input}
                             aria-describedby="emailHelp"
                             placeholder="Enter your email address" />
+                        {errorMessage.email && <p style={{ color: 'red' }}>{errorMessage.email}</p>}
                     </article>
 
                     <article className="form-group mb-2">
@@ -89,6 +80,7 @@ export default function PersonalForm({ formData, setFormData }) {
                             onChange={handleDataChange}
                             className={Styles.input}
                             placeholder="Enter your phone number" />
+                        {errorMessage.phone && <p style={{ color: 'red' }}>{errorMessage.phone}</p>}
                     </article>
 
                     <article className="form-group mb-2">
@@ -113,6 +105,7 @@ export default function PersonalForm({ formData, setFormData }) {
                             onChange={handleDataChange}
                             className={Styles.input}
                             placeholder="Enter your Nationality" />
+                        {errorMessage.nationality && <p style={{ color: 'red' }}>{errorMessage.nationality}</p>}
                     </article>
 
                     <article className="form-group mb-2">
@@ -137,6 +130,7 @@ export default function PersonalForm({ formData, setFormData }) {
                             onChange={handleDataChange}
                             className={Styles.input}
                             placeholder="Enter your ID Number" />
+                        {errorMessage.idNumber && <p style={{ color: 'red' }}>{errorMessage.idNumber}</p>}
                     </article>
 
                     <article className="form-group mb-2">
@@ -160,6 +154,7 @@ export default function PersonalForm({ formData, setFormData }) {
                             value={formData.personalData.dateOfBirth}
                             onChange={handleDataChange}
                             className={Styles.input} />
+                        {errorMessage.dateOfBirth && <p style={{ color: 'red' }}>{errorMessage.dateOfBirth}</p>}
                     </article>
 
                     <article className="form-group mb-2">
@@ -184,6 +179,7 @@ export default function PersonalForm({ formData, setFormData }) {
                             onChange={handleDataChange}
                             className={Styles.input}
                             placeholder="Enter your Gender" />
+                        {errorMessage.gender && <p style={{ color: 'red' }}>{errorMessage.gender}</p>}
                     </article>
                     
                     <article className='d-grid'>

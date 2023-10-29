@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './styles.module.css';
 
-export default function AddQuestionForm({ formData, setFormData }) {
+export default function AddQuestionForm({ formData, handleDataChange }) {
     const [typeQuestion, setTypeQuestions] = useState('');
     const [showCard, setShowCard] = useState(false);
     const [isActive, setIsActive] = useState(false);
@@ -15,18 +15,6 @@ export default function AddQuestionForm({ formData, setFormData }) {
         const selectedValue = e.target.value;
         setTypeQuestions(selectedValue);
         setShowCard(true);
-    };
-    const handleDataChange = (event) => {
-        const { name, value } = event.target;
-        console.log(`${name}:", ${value}`);
-        // Assuming setFormData is passed as a prop
-        setFormData((prevData) => ({
-            ...prevData,
-            personalData: {
-                ...prevData.personalData,
-                [name]: value,
-            }
-        }));
     };
 
     return (

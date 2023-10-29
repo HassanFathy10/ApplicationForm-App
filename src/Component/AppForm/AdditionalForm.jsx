@@ -4,7 +4,7 @@ import AddQuestionForm from './AddQuestionForm';
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './styles.module.css';
 
-export default function AdditionalForm() {
+export default function AdditionalForm({ formData, setFormData }) {
     const [isActive, setIsActive] = useState(false);
 
     const questionForm = () => {
@@ -70,7 +70,7 @@ export default function AdditionalForm() {
                                     <Unicons.UilPlus color='#228B22' /> {isActive ? 'Hide a question' : 'Add a question'}
                                 </span>
                                 {isActive && (
-                                    <AddQuestionForm />
+                                    <AddQuestionForm formData={formData} setFormData={setFormData} />
                                 )}
                                 <button type='submit' className='btn btn-success mt-2'>Save</button>
                             </article>

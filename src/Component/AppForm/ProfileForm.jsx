@@ -6,7 +6,7 @@ import Styles from './styles.module.css';
 // import ApplicationForm from '../ApplicationForm';
 
 
-export default function ProfileForm() {
+export default function ProfileForm({ formData, setFormData }) {
     const [isActive, setIsActive] = useState(false);
     const [btnActive, setBtnActive] = useState(false);
     const questionForm = () => {
@@ -78,7 +78,7 @@ export default function ProfileForm() {
                             </span>
                             {isActive && (
                                 <article>
-                                    <AddQuestionForm />
+                                    <AddQuestionForm formData={formData} setFormData={setFormData} />
                                 </article>
                             )}
                             <button type='submit' className='btn btn-success mt-2'>Save</button>
