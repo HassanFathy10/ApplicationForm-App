@@ -5,7 +5,7 @@ import * as Unicons from '@iconscout/react-unicons';
 import Styles from './styles.module.css';
 
 
-export default function ProfileForm({ formData, setFormData }) {
+export default function ProfileForm({ formData, setFormData, handleDataChange, errorMessage }) {
     const [isActive, setIsActive] = useState(false);
     const [btnActive, setBtnActive] = useState(false);
     const questionForm = () => {
@@ -34,12 +34,18 @@ export default function ProfileForm({ formData, setFormData }) {
                                     <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
                                 </article>
                             </article>
-                            <input type="email" className={Styles.input} id="exampleInputEmail1" aria-describedby="emailHelp" />
+                            <input
+                                type="text"
+                                name='Education'
+                                id='Education'
+                                value={formData.profileData.Education}
+                                onChange={handleDataChange}
+                                className={Styles.input} />
                         </article>
 
                         <article className="form-group mb-2">
                             <article className='d-flex'>
-                                <label className='fw-bolder mb-1' htmlFor="number">Experience</label>
+                                <label className='fw-bolder mb-1' htmlFor="number">Experience Years</label>
                                 <article className="form-check ms-auto">
                                     <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                     <label className="form-check-label fw-medium" htmlFor="flexCheckDefault">
@@ -52,7 +58,13 @@ export default function ProfileForm({ formData, setFormData }) {
                                     <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">{btnActive ? 'Show' : 'Hide'}</label>
                                 </article>
                             </article>
-                            <input type="number" className={Styles.input} />
+                            <input
+                                type="number"
+                                name='Experience'
+                                id='Experience'
+                                value={formData.profileData.Experience}
+                                onChange={handleDataChange}
+                                className={Styles.input} />
                         </article>
 
                         <article className="form-group mb-2">

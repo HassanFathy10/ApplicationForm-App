@@ -46,17 +46,25 @@ export default function Preview() {
                       <li className='fw-bold list-group-item'>Require: <span className='text-success fw-medium'>{formData?.personalData?.question || 'empty'}</span></li>
                     </ul>
                   </li>
-                  <li className="list-group-item"><p>Profile Data: {formData?.profileData}</p></li>
-                  <li className="list-group-item"><p>Additional Data: {formData?.additionalData}</p></li>
+                  <ul className='list-unstyled list-group-item'>
+                    <li className='text-decoration-underline fw-bold text-info pb-2'>Profile Data:</li>
+                    <li className="fw-bold list-group-item">Education: <span className='text-success fw-medium'>{formData?.profileData?.Education || 'empty'}</span></li>
+                    <li className="fw-bold list-group-item">Experience Years: <span className='text-success fw-medium'>{formData?.profileData?.Experience || 'empty'}</span></li>
+                  </ul>
+                  <ul className='list-unstyled list-group-item'>
+                    <li className='text-decoration-underline fw-bold text-info pb-2'>Additional Data:</li>
+                    <li className="fw-bold list-group-item">Education: <span className='text-success fw-medium'>{formData?.profileData?.Education || 'empty'}</span></li>
+                    <li className="fw-bold list-group-item">Experience Years: <span className='text-success fw-medium'>{formData?.profileData?.Experience || 'empty'}</span></li>
+                  </ul>
                 </ul>
               </article>
               <article className='position-absolute m-5 bottom-0 end-0'>
                 <button type='submit' className='btn btn-success' onClick={handleSendClick}>Send</button>
               </article>
             </article>) : (
-              <article className='text-center d-grid pt-5'>
-                <h1 className=' pb-2'><Unicons.UilCheckCircle size='5rem' color='#15A092' /></h1>
-                <p className='fw-bolder text-success fs-4'>Your application has been submitted successfully</p>
+            <article className='text-center d-grid pt-5'>
+              <h1 className=' pb-2'><Unicons.UilCheckCircle size='5rem' color='#15A092' /></h1>
+              <p className='fw-bolder text-success fs-4'>Your application has been submitted successfully</p>
             </article>
           )}
         </article>
