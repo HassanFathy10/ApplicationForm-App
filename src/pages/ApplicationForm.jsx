@@ -28,6 +28,7 @@ export default function ApplicationForm() {
             idNumber: '',
             dateOfBirth: '',
             gender: '',
+            typeQuestions: '',
             question: '',
         },
         profileData: '',

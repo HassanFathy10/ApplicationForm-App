@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './styles.module.css';
 
-export default function AddQuestionForm({ formData, handleDataChange, isActivated }) {
+export default function AddQuestionForm({ formData, handleDataChange }) {
     const [typeQuestion, setTypeQuestions] = useState('');
     const [showCard, setShowCard] = useState(false);
     const [isActive, setIsActive] = useState(false);
@@ -57,9 +57,6 @@ export default function AddQuestionForm({ formData, handleDataChange, isActivate
                                                 className="form-control border-3 w-100 p-3"
                                                 placeholder="Type here" />
                                         </article>
-                                        <article className='d-flex pt-4'>
-                                            <span type="button" onClick={() => !isActivated} className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
-                                        </article>
                                     </article>)}
                                 
                                 {typeQuestion === 'Short Answer' && (
@@ -74,9 +71,6 @@ export default function AddQuestionForm({ formData, handleDataChange, isActivate
                                                 onChange={handleDataChange}
                                                 className="form-control border-3 w-100 p-3"
                                                 placeholder="Type here" />
-                                        </article>
-                                        <article className='d-flex pt-4'>
-                                            <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
                                         </article>
                                     </article>
                                 )}
@@ -98,9 +92,6 @@ export default function AddQuestionForm({ formData, handleDataChange, isActivate
                                         <label className="form-check-label fw-medium" htmlFor="flexCheckDefault">
                                             Disqualify candidate if the answer is no
                                         </label>
-                                    </article>
-                                    <article className='d-flex pt-4'>
-                                        <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
                                     </article>
                                 </article>)}
 
@@ -130,9 +121,6 @@ export default function AddQuestionForm({ formData, handleDataChange, isActivate
                                                     Enable “Other” option
                                                 </label>
                                             </article>
-                                        </article>
-                                        <article className='d-flex pt-4'>
-                                            <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
                                         </article>
                                     </article>
                                 </article>)}
@@ -169,9 +157,6 @@ export default function AddQuestionForm({ formData, handleDataChange, isActivate
                                                     <input type="text" className="form-control border-3 w-100 p-3" placeholder="Enter number of choice allowed here" />
                                                 </article>
                                             </article>
-                                            <article className='d-flex pt-4'>
-                                                <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
-                                            </article>
                                         </article>
                                     </article>)}
 
@@ -187,9 +172,6 @@ export default function AddQuestionForm({ formData, handleDataChange, isActivate
                                                 onChange={handleDataChange}
                                                 className="form-control border-3 w-100 p-3"
                                                 placeholder="Type here" />
-                                        </article>
-                                        <article className='d-flex pt-4'>
-                                            <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
                                         </article>
                                     </article>)}
 
@@ -223,9 +205,6 @@ export default function AddQuestionForm({ formData, handleDataChange, isActivate
                                                 onChange={handleDataChange}
                                                 className='d-flex fw-medium pt-2 pb-2'
                                             />
-                                        </article>
-                                        <article className='d-flex pt-4'>
-                                            <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
                                         </article>
                                     </article>)}
 
@@ -265,9 +244,6 @@ export default function AddQuestionForm({ formData, handleDataChange, isActivate
                                                                 <option value="">in (sec/min)</option>
                                                             </select>
                                                         </article>
-                                                    </article>
-                                                    <article className='d-flex pt-4'>
-                                                        <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
                                                     </article>
                                                 </article>
                                             </article>

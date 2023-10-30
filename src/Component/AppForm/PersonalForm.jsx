@@ -186,10 +186,12 @@ export default function PersonalForm({ formData, handleDataChange, errorMessage 
                         <span type='button' className='fw-bold mt-4' style={{ color: '#228B22' }} onClick={questionForm}>
                             <Unicons.UilPlus color='#228B22' /> {isActive ? 'Hide a question' : 'Add a question'}
                         </span>
-                            {isActive && (
-                            <AddQuestionForm formData={formData} handleDataChange={handleDataChange} isActivated={isActive} />
-                            )}
-                            <button type='submit' className='btn btn-success mt-2'>Save</button>
+                        {isActive && (
+                            <article>
+                                <AddQuestionForm formData={formData} handleDataChange={handleDataChange} />
+                            </article>
+                        )}
+                        <button type='submit' className='btn btn-success mt-2'>Save</button>
                     </article>
                 </form>
             </article>
