@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './styles.module.css';
 
-export default function AddQuestionForm({ formData, handleDataChange }) {
+export default function AddQuestionForm({ formData, handleDataChange, isActivated }) {
     const [typeQuestion, setTypeQuestions] = useState('');
     const [showCard, setShowCard] = useState(false);
     const [isActive, setIsActive] = useState(false);
@@ -23,22 +23,28 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                 <h5 className="card-header text-black fw-bolder bg-info">Questions</h5>
                 <article className="card-body">
                     <h6 className="card-title fw-bolder">Type</h6>
-                    <select className="form-select" name='typeQuestions' value={formData.personalData.typeQuestions} onChange={HandleSelectType || handleDataChange} defaultValue="" aria-label="Default select example">
+                    <select className="form-select"
+                        name='typeQuestions'
+                        value={formData.personalData.typeQuestions}
+                        onChange={(e) => {
+                            HandleSelectType(e);
+                            handleDataChange(e);
+                        }} defaultValue="" aria-label="Default select example">
                         <option value="">Type Here</option>
-                        <option value="1">Paragraph</option>
-                        <option value="2">Short Answer</option>
-                        <option value="3">Yes/No</option>
-                        <option value="4">Dropdown</option>
-                        <option value="5">Multiple Choice</option>
-                        <option value="6">Date</option>
-                        <option value="7">Number</option>
-                        <option value="8">File upload</option>
+                        <option value="Paragraph">Paragraph</option>
+                        <option value="Short Answer">Short Answer</option>
+                        <option value="Yes/No">Yes/No</option>
+                        <option value="Dropdown">Dropdown</option>
+                        <option value="Multiple Choice">Multiple Choice</option>
+                        <option value="Date">Date</option>
+                        <option value="Number">Number</option>
+                        <option value="File upload">File upload</option>
                         <option value="9">Video question</option>
                     </select>
                     <article>
                         {showCard && (
                             <article>
-                                {typeQuestion === '1' && (
+                                {typeQuestion === 'Paragraph' && (
                                     <article>
                                         <article className='mt-3'>
                                             <label className='fw-bolder mb-2' htmlFor="text">Question</label>
@@ -51,13 +57,12 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                                 className="form-control border-3 w-100 p-3"
                                                 placeholder="Type here" />
                                         </article>
-                                        <article className='d-flex mt-4'>
-                                            <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
-                                            <button className='btn btn-success'>Save</button>
+                                        <article className='d-flex pt-4'>
+                                            <span type="button" onClick={() => !isActivated} className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
                                         </article>
                                     </article>)}
                                 
-                                {typeQuestion === '2' && (
+                                {typeQuestion === 'Short Answer' && (
                                     <article>
                                         <article className='mt-3'>
                                             <label className='fw-bolder mb-2' htmlFor="text">Answer</label>
@@ -70,14 +75,13 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                                 className="form-control border-3 w-100 p-3"
                                                 placeholder="Type here" />
                                         </article>
-                                        <article className='d-flex mt-4'>
+                                        <article className='d-flex pt-4'>
                                             <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
-                                            <button className='btn btn-success'>Save</button>
                                         </article>
                                     </article>
                                 )}
 
-                                {typeQuestion === '3' && (<article>
+                                {typeQuestion === 'Yes/No' && (<article>
                                     <article className='mt-3'>
                                         <label className='fw-bolder mb-2' htmlFor="number">Question</label>
                                         <input
@@ -95,13 +99,12 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                             Disqualify candidate if the answer is no
                                         </label>
                                     </article>
-                                    <article className='d-flex mt-4'>
+                                    <article className='d-flex pt-4'>
                                         <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
-                                        <button className='btn btn-success'>Save</button>
                                     </article>
                                 </article>)}
 
-                                {typeQuestion === '4' && (<article className='card-body'>
+                                {typeQuestion === 'Dropdown' && (<article className='card-body'>
                                     <article className="form-group mb-2">
                                         <article className='mb-2'>
                                             <label className='fw-bolder mb-2' htmlFor="number">Question</label>
@@ -128,14 +131,13 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                                 </label>
                                             </article>
                                         </article>
-                                        <article className='d-flex mt-4'>
+                                        <article className='d-flex pt-4'>
                                             <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
-                                            <button className='btn btn-success'>Save</button>
                                         </article>
                                     </article>
                                 </article>)}
 
-                                {typeQuestion === '5' && (
+                                {typeQuestion === 'Multiple Choice' && (
                                     <article className='card-body'>
                                         <article className="form-group mb-2">
                                             <article className='mb-2'>
@@ -167,14 +169,13 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                                     <input type="text" className="form-control border-3 w-100 p-3" placeholder="Enter number of choice allowed here" />
                                                 </article>
                                             </article>
-                                            <article className='d-flex mt-4'>
+                                            <article className='d-flex pt-4'>
                                                 <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
-                                                <button className='btn btn-success'>Save</button>
                                             </article>
                                         </article>
                                     </article>)}
 
-                                {typeQuestion === '6' && (
+                                {typeQuestion === 'Date' && (
                                     <article>
                                         <article className='mt-3'>
                                             <label className='fw-bolder mb-2' htmlFor="date">Date</label>
@@ -187,13 +188,12 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                                 className="form-control border-3 w-100 p-3"
                                                 placeholder="Type here" />
                                         </article>
-                                        <article className='d-flex mt-4'>
+                                        <article className='d-flex pt-4'>
                                             <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
-                                            <button className='btn btn-success'>Save</button>
                                         </article>
                                     </article>)}
 
-                                {typeQuestion === '7' && (
+                                {typeQuestion === 'Number' && (
                                     <article>
                                         <article className='mt-3'>
                                             <label className='fw-bolder mb-2' htmlFor="number">Number</label>
@@ -206,15 +206,14 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                                 className="form-control border-3 w-100 p-3"
                                                 placeholder="Type here" />
                                         </article>
-                                        <article className='d-flex mt-4'>
+                                        <article className='d-flex pt-4'>
                                             <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
-                                            <button className='btn btn-success'>Save</button>
                                         </article>
                                     </article>)}
 
-                                {typeQuestion === '8' && (
+                                {typeQuestion === 'File upload' && (
                                     <article>
-                                        <article className='mt-3'>
+                                        <article className='pt-3'>
                                             <label className='fw-bolder mb-2' htmlFor="file">FileUpload</label>
                                             <input
                                                 type="file"
@@ -222,17 +221,16 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                                 id='question'
                                                 value={formData.personalData.question}
                                                 onChange={handleDataChange}
-                                                className='d-flex fw-medium mt-2'
-                                                />
+                                                className='d-flex fw-medium pt-2 pb-2'
+                                            />
                                         </article>
-                                        <article className='d-flex mt-4'>
+                                        <article className='d-flex pt-4'>
                                             <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
-                                            <button className='btn btn-success'>Save</button>
                                         </article>
                                     </article>)}
 
-                                {typeQuestion === '9' && (
-                                    <article className="card  shadow mt-4 ">
+                                {typeQuestion === 'Video question' && (
+                                    <article className="card  shadow pt-4 ">
                                         <h5 className="card-header bg-info">Video based questions</h5>
                                         <article className="card-body">
                                             <article className='d-flex justify-content-center flex-wrap'>
@@ -268,9 +266,8 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                                             </select>
                                                         </article>
                                                     </article>
-                                                    <article className='d-flex mt-4'>
+                                                    <article className='d-flex pt-4'>
                                                         <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
-                                                        <button className='btn btn-success'>Save</button>
                                                     </article>
                                                 </article>
                                             </article>

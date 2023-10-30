@@ -6,7 +6,7 @@ import Styles from './styles.module.css';
 
 
 
-export default function PersonalForm({ formData, setFormData, handleDataChange, errorMessage }) {
+export default function PersonalForm({ formData, handleDataChange, errorMessage }) {
     const [isActive, setIsActive] = useState(false);
 
     const questionForm = () => {
@@ -187,7 +187,7 @@ export default function PersonalForm({ formData, setFormData, handleDataChange, 
                             <Unicons.UilPlus color='#228B22' /> {isActive ? 'Hide a question' : 'Add a question'}
                         </span>
                             {isActive && (
-                                <AddQuestionForm formData={formData} setFormData={setFormData} />
+                            <AddQuestionForm formData={formData} handleDataChange={handleDataChange} isActivated={isActive} />
                             )}
                             <button type='submit' className='btn btn-success mt-2'>Save</button>
                     </article>

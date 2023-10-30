@@ -42,8 +42,8 @@ export default function Preview() {
                       <li className='fw-bold'>Date Of Birth: <span className='text-success fw-medium'>{formData?.personalData?.dateOfBirth}</span></li>
                       <li className='fw-bold'>Gender: <span className='text-success fw-medium'>{formData?.personalData?.gender}</span></li>
                       <li className='text-decoration-underline fw-bold text-info pb-2 pt-2'>Questions:</li>
-                      <li className='fw-bold'><span className='text-success fw-medium'>{formData?.personalData?.typeQuestions}</span></li>
-                      <li className='fw-bold'><span className='text-success fw-medium'>{formData?.personalData?.question}</span></li>
+                      <li className='fw-bold'>Type Question: <span className='text-success fw-medium'>{formData?.personalData?.typeQuestions}</span></li>
+                      <li className='fw-bold'>Require: <span className='text-success fw-medium'>{formData?.personalData?.question}</span></li>
                     </ul>
                   </li>
                   <li className="list-group-item"><p>Profile Data: {formData?.profileData}</p></li>
