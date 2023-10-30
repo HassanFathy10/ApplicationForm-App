@@ -3,7 +3,6 @@ import { Col } from 'react-bootstrap';
 import AddQuestionForm from './AddQuestionForm';
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './styles.module.css';
-// import ApplicationForm from '../ApplicationForm';
 
 
 export default function ProfileForm({ formData, setFormData }) {

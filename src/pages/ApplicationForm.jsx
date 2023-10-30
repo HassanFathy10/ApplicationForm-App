@@ -31,7 +31,11 @@ export default function ApplicationForm() {
             typeQuestions: '',
             question: '',
         },
-        profileData: '',
+        profileData: {
+            Education: '',
+            Experience: '',
+            Resume: '',
+        },
         additionalData: ''
     });
     const handleDataChange = (event) => {
