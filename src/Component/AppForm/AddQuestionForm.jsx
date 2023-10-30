@@ -23,7 +23,7 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                 <h5 className="card-header text-black fw-bolder bg-info">Questions</h5>
                 <article className="card-body">
                     <h6 className="card-title fw-bolder">Type</h6>
-                    <select className="form-select" onChange={HandleSelectType} defaultValue="" aria-label="Default select example">
+                    <select className="form-select" name='typeQuestions' value={formData.personalData.typeQuestions} onChange={HandleSelectType || handleDataChange} defaultValue="" aria-label="Default select example">
                         <option value="">Type Here</option>
                         <option value="1">Paragraph</option>
                         <option value="2">Short Answer</option>
