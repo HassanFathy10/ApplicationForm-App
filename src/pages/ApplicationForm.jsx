@@ -40,7 +40,7 @@ export default function ApplicationForm() {
             Resume: '',
         },
         additionalData: {
-            paraghraph: '',
+            Paraghraph: '',
         }
     });
     const handleDataChange = (event) => {

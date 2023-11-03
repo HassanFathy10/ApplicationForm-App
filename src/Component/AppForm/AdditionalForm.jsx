@@ -4,7 +4,7 @@ import AddQuestionForm from './AddQuestionForm';
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './styles.module.css';
 
-export default function AdditionalForm({ formData, setFormData }) {
+export default function AdditionalForm({ formData, setFormData, handleDataChange }) {
     const [isActive, setIsActive] = useState(false);
 
     const questionForm = () => {
@@ -24,7 +24,12 @@ export default function AdditionalForm({ formData, setFormData }) {
                                 </article>
                             </article>
                             <span className='fw-bolder fs-5'>Please tell me about yourself in less than 500 words</span>
-                            <textarea className={Styles.input} id="exampleFormControlTextarea1" />
+                            <textarea
+                                name='Paraghraph'
+                                id='Paraghraph'
+                                value={formData.additionalData.Paraghraph}
+                                onChange={handleDataChange}
+                                className={Styles.input}/>
                         </article>
                         <article className="form-group mb-2">
                             <article className='d-flex'>
