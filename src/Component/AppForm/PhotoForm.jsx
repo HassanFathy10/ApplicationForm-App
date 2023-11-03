@@ -66,7 +66,6 @@ export default function PhotoForm(props) {
                                                 Upload Image
                                             <input
                                                 type="file"
-                                                accept="image/*"
                                                 onChange={handleImageUpload}
                                                 style={{ display: 'none' }}
                                                 ref={fileInputRef}

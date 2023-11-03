@@ -41,6 +41,7 @@ export default function ProfileForm({ formData, setFormData, handleDataChange, e
                                 value={formData.profileData.Education}
                                 onChange={handleDataChange}
                                 className={Styles.input} />
+                            {errorMessage.Education && <p style={{ color: 'red' }}>{errorMessage.Education}</p>}
                         </article>
 
                         <article className="form-group mb-2">
@@ -65,6 +66,7 @@ export default function ProfileForm({ formData, setFormData, handleDataChange, e
                                 value={formData.profileData.Experience}
                                 onChange={handleDataChange}
                                 className={Styles.input} />
+                            {errorMessage.Experience && <p style={{ color: 'red' }}>{errorMessage.Experience}</p>}
                         </article>
 
                         <article className="form-group mb-2">
@@ -81,7 +83,14 @@ export default function ProfileForm({ formData, setFormData, handleDataChange, e
                                     <label className="form-check-label fw-medium" htmlFor="flexSwitchCheckDefault">Hide</label>
                                 </article>
                             </article>
-                            <input className='fw-medium mt-3' type="file" />
+                            <input
+                                type="file" 
+                                name='Resume'
+                                id='Resume'
+                                value={formData.profileData.Resume}
+                                onChange={handleDataChange}
+                                className='fw-medium mt-3' />
+                            {errorMessage.Resume && <p style={{ color: 'red' }}>{errorMessage.Resume}</p>}
                         </article>
                         <article className='d-grid'>
                             <span type='button' className='fw-bold mt-4' style={{ color: '#228B22' }} onClick={questionForm}>

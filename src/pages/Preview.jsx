@@ -50,6 +50,7 @@ export default function Preview() {
                     <li className='text-decoration-underline fw-bold text-info pb-2'>Profile Data:</li>
                     <li className="fw-bold list-group-item">Education: <span className='text-success fw-medium'>{formData?.profileData?.Education || 'empty'}</span></li>
                     <li className="fw-bold list-group-item">Experience Years: <span className='text-success fw-medium'>{formData?.profileData?.Experience || 'empty'}</span></li>
+                    <li className="fw-bold list-group-item">Experience Years: <span className='text-success fw-medium'>{formData?.profileData?.Resume || 'empty'}</span></li>
                   </ul>
                   <ul className='list-unstyled list-group-item'>
                     <li className='text-decoration-underline fw-bold text-info pb-2'>Additional Data:</li>

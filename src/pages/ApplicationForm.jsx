@@ -16,6 +16,9 @@ export default function ApplicationForm() {
         idNumber: '',
         dateOfBirth: '',
         gender: '',
+        Education: '',
+        Experience: '',
+        Resume: '',
     });
     const [formData, setFormData] = useState({
         photoData: '',
@@ -36,7 +39,9 @@ export default function ApplicationForm() {
             Experience: '',
             Resume: '',
         },
-        additionalData: ''
+        additionalData: {
+            paraghraph: '',
+        }
     });
     const handleDataChange = (event) => {
         const { name, value } = event.target;
