@@ -33,17 +33,17 @@ export default function Preview() {
                   <li className="list-group-item">
                     <ul className='list-unstyled list-group-item'>
                       <li className='text-decoration-underline fw-bold text-info pb-2'>Personal Data:</li>
-                      <li className='fw-bold list-group-item'>First Name: <span className='text-success fw-medium'>{formData?.personalData?.firstName || 'empty'}</span></li>
-                      <li className='fw-bold list-group-item'>Last Name: <span className='text-success fw-medium'>{formData?.personalData?.lastName || 'empty'}</span></li>
-                      <li className='fw-bold list-group-item'>Email: <span className='text-success fw-medium'>{formData?.personalData?.email || 'empty'}</span></li>
-                      <li className='fw-bold list-group-item'>phone: <span className='text-success fw-medium'>{formData?.personalData?.phone || 'empty'}</span></li>
-                      <li className='fw-bold list-group-item'>Nationality: <span className='text-success fw-medium'>{formData?.personalData?.nationality || 'empty'}</span></li>
-                      <li className='fw-bold list-group-item'>Id Number: <span className='text-success fw-medium'>{formData?.personalData?.idNumber || 'empty'}</span></li>
-                      <li className='fw-bold list-group-item'>Date Of Birth: <span className='text-success fw-medium'>{formData?.personalData?.dateOfBirth || 'empty'}</span></li>
-                      <li className='fw-bold list-group-item'>Gender: <span className='text-success fw-medium'>{formData?.personalData?.gender || 'empty'}</span></li>
+                      <li className='fw-bold list-group-item'>First Name: <span className='text-success fw-medium'>{formData?.personalData?.FirstName || 'empty'}</span></li>
+                      <li className='fw-bold list-group-item'>Last Name: <span className='text-success fw-medium'>{formData?.personalData?.LastName || 'empty'}</span></li>
+                      <li className='fw-bold list-group-item'>Email: <span className='text-success fw-medium'>{formData?.personalData?.Email || 'empty'}</span></li>
+                      <li className='fw-bold list-group-item'>phone: <span className='text-success fw-medium'>{formData?.personalData?.Phone || 'empty'}</span></li>
+                      <li className='fw-bold list-group-item'>Nationality: <span className='text-success fw-medium'>{formData?.personalData?.Nationality || 'empty'}</span></li>
+                      <li className='fw-bold list-group-item'>Id Number: <span className='text-success fw-medium'>{formData?.personalData?.IdNumber || 'empty'}</span></li>
+                      <li className='fw-bold list-group-item'>Date Of Birth: <span className='text-success fw-medium'>{formData?.personalData?.DateOfBirth || 'empty'}</span></li>
+                      <li className='fw-bold list-group-item'>Gender: <span className='text-success fw-medium'>{formData?.personalData?.Gender || 'empty'}</span></li>
                       <li className='text-decoration-underline fw-bold text-info pb-2 pt-2'>Questions:</li>
-                      <li className='fw-bold list-group-item'>Type Question: <span className='text-success fw-medium'>{formData?.personalData?.typeQuestions || 'empty'}</span></li>
-                      <li className='fw-bold list-group-item'>Require: <span className='text-success fw-medium'>{formData?.personalData?.question || 'empty'}</span></li>
+                      <li className='fw-bold list-group-item'>Type Question: <span className='text-success fw-medium'>{formData?.personalData?.TypeQuestions || 'empty'}</span></li>
+                      <li className='fw-bold list-group-item'>Require: <span className='text-success fw-medium'>{formData?.personalData?.Question || 'empty'}</span></li>
                     </ul>
                   </li>
                   <ul className='list-unstyled list-group-item'>

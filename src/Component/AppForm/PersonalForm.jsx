@@ -22,40 +22,40 @@ export default function PersonalForm({ formData, handleDataChange, errorMessage 
                         <label className='fw-bolder mb-1' htmlFor="text">First Name</label>
                         <input
                             type="text"
-                            name="firstName"
-                            id='firstName'
-                            value={formData.personalData.firstName}
+                            name="FirstName"
+                            id='FirstName'
+                            value={formData.personalData.FirstName}
                             onChange={handleDataChange}
                             className={Styles.input}
                             placeholder="Enter your First name" />
-                        {errorMessage.firstName && <p style={{ color: 'red' }}>{errorMessage.firstName}</p>}
+                        {errorMessage.firstName && <p style={{ color: 'red' }}>{errorMessage.FirstName}</p>}
                     </article>
 
                     <article className="form-group mb-2">
                         <label className='fw-bolder mb-1' htmlFor="text">Last Name</label>
                         <input
                             type="text"
-                            name="lastName"
-                            id='lastName'
-                            value={formData.personalData.lastName}
+                            name="LastName"
+                            id='LastName'
+                            value={formData.personalData.LastName}
                             onChange={handleDataChange}
                             className={Styles.input}
                             placeholder="Enter your Last name" />
-                        {errorMessage.lastName && <p style={{ color: 'red' }}>{errorMessage.lastName}</p>}
+                        {errorMessage.lastName && <p style={{ color: 'red' }}>{errorMessage.LastName}</p>}
                     </article>
 
                     <article className="form-group mb-2">
                         <label className='fw-bolder mb-1' htmlFor="exampleInputEmail1">Email</label>
                         <input
                             type="email"
-                            name="email"
-                            id='email'
-                            value={formData.personalData.email}
+                            name="Email"
+                            id='Email'
+                            value={formData.personalData.Email}
                             onChange={handleDataChange}
                             className={Styles.input}
                             aria-describedby="emailHelp"
                             placeholder="Enter your email address" />
-                        {errorMessage.email && <p style={{ color: 'red' }}>{errorMessage.email}</p>}
+                        {errorMessage.email && <p style={{ color: 'red' }}>{errorMessage.Email}</p>}
                     </article>
 
                     <article className="form-group mb-2">
@@ -74,13 +74,13 @@ export default function PersonalForm({ formData, handleDataChange, errorMessage 
                         </article>
                         <input
                             type="number"
-                            name="phone"
-                            id="phone"
-                            value={formData.personalData.phone}
+                            name="Phone"
+                            id="Phone"
+                            value={formData.personalData.Phone}
                             onChange={handleDataChange}
                             className={Styles.input}
                             placeholder="Enter your phone number" />
-                        {errorMessage.phone && <p style={{ color: 'red' }}>{errorMessage.phone}</p>}
+                        {errorMessage.phone && <p style={{ color: 'red' }}>{errorMessage.Phone}</p>}
                     </article>
 
                     <article className="form-group mb-2">
@@ -99,13 +99,13 @@ export default function PersonalForm({ formData, handleDataChange, errorMessage 
                         </article>
                         <input
                             type="text"
-                            name="nationality"
-                            id='nationality'
-                            value={formData.personalData.nationality}
+                            name="Nationality"
+                            id='Nationality'
+                            value={formData.personalData.Nationality}
                             onChange={handleDataChange}
                             className={Styles.input}
                             placeholder="Enter your Nationality" />
-                        {errorMessage.nationality && <p style={{ color: 'red' }}>{errorMessage.nationality}</p>}
+                        {errorMessage.nationality && <p style={{ color: 'red' }}>{errorMessage.Nationality}</p>}
                     </article>
 
                     <article className="form-group mb-2">
@@ -124,13 +124,13 @@ export default function PersonalForm({ formData, handleDataChange, errorMessage 
                         </article>
                         <input
                             type="number"
-                            name="idNumber"
-                            id='idNumber'
-                            value={formData.personalData.idNumber}
+                            name="IdNumber"
+                            id='IdNumber'
+                            value={formData.personalData.IdNumber}
                             onChange={handleDataChange}
                             className={Styles.input}
                             placeholder="Enter your ID Number" />
-                        {errorMessage.idNumber && <p style={{ color: 'red' }}>{errorMessage.idNumber}</p>}
+                        {errorMessage.idNumber && <p style={{ color: 'red' }}>{errorMessage.IdNumber}</p>}
                     </article>
 
                     <article className="form-group mb-2">
@@ -149,12 +149,12 @@ export default function PersonalForm({ formData, handleDataChange, errorMessage 
                         </article>
                         <input
                             type="date"
-                            name="dateOfBirth"
-                            id='dateOfBirth'
-                            value={formData.personalData.dateOfBirth}
+                            name="DateOfBirth"
+                            id='DateOfBirth'
+                            value={formData.personalData.DateOfBirth}
                             onChange={handleDataChange}
                             className={Styles.input} />
-                        {errorMessage.dateOfBirth && <p style={{ color: 'red' }}>{errorMessage.dateOfBirth}</p>}
+                        {errorMessage.dateOfBirth && <p style={{ color: 'red' }}>{errorMessage.DateOfBirth}</p>}
                     </article>
 
                     <article className="form-group mb-2">
@@ -173,13 +173,13 @@ export default function PersonalForm({ formData, handleDataChange, errorMessage 
                         </article>
                         <input
                             type="text"
-                            name="gender"
-                            id='gender'
-                            value={formData.personalData.gender}
+                            name="Gender"
+                            id='Gender'
+                            value={formData.personalData.Gender}
                             onChange={handleDataChange}
                             className={Styles.input}
                             placeholder="Enter your Gender" />
-                        {errorMessage.gender && <p style={{ color: 'red' }}>{errorMessage.gender}</p>}
+                        {errorMessage.gender && <p style={{ color: 'red' }}>{errorMessage.Gender}</p>}
                     </article>
                     
                     <article className='d-grid'>

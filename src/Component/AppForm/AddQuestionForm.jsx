@@ -24,12 +24,12 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                 <article className="card-body">
                     <h6 className="card-title fw-bolder">Type</h6>
                     <select className="form-select"
-                        name='typeQuestions'
-                        value={formData.personalData.typeQuestions}
+                        name='TypeQuestions'
+                        value={formData.personalData.TypeQuestions}
                         onChange={(e) => {
                             HandleSelectType(e);
                             handleDataChange(e);
-                        }} defaultValue="" aria-label="Default select example">
+                        }} aria-label="Default select example">
                         <option value="">Type Here</option>
                         <option value="Paragraph">Paragraph</option>
                         <option value="Short Answer">Short Answer</option>
@@ -39,7 +39,7 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                         <option value="Date">Date</option>
                         <option value="Number">Number</option>
                         <option value="File upload">File upload</option>
-                        <option value="9">Video question</option>
+                        <option value="Video question">Video question</option>
                     </select>
                     <article>
                         {showCard && (
@@ -50,9 +50,9 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                             <label className='fw-bolder mb-2' htmlFor="text">Question</label>
                                             <input
                                                 type="text"
-                                                name="question"
-                                                id='question'
-                                                value={formData.personalData.question}
+                                                name="Question"
+                                                id='Question'
+                                                value={formData.personalData.Question}
                                                 onChange={handleDataChange}
                                                 className="form-control border-3 w-100 p-3"
                                                 placeholder="Type here" />
@@ -65,9 +65,9 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                             <label className='fw-bolder mb-2' htmlFor="text">Answer</label>
                                             <input
                                                 type="text"
-                                                name="question"
-                                                id='question'
-                                                value={formData.personalData.question}
+                                                name="Question"
+                                                id='Question'
+                                                value={formData.personalData.Question}
                                                 onChange={handleDataChange}
                                                 className="form-control border-3 w-100 p-3"
                                                 placeholder="Type here" />
@@ -80,9 +80,9 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                         <label className='fw-bolder mb-2' htmlFor="number">Question</label>
                                         <input
                                             type="text"
-                                            name="question"
-                                            id='question'
-                                            value={formData.personalData.question}
+                                            name="Question"
+                                            id='Question'
+                                            value={formData.personalData.Question}
                                             onChange={handleDataChange}
                                             className="form-control border-3 w-100 p-3"
                                             placeholder="Type here" />
@@ -101,9 +101,9 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                             <label className='fw-bolder mb-2' htmlFor="number">Question</label>
                                             <input
                                                 type="text"
-                                                name="question"
-                                                id='question'
-                                                value={formData.personalData.question}
+                                                name="Question"
+                                                id='Question'
+                                                value={formData.personalData.Question}
                                                 onChange={handleDataChange}
                                                 className="form-control border-3 w-100 p-3"
                                                 placeholder="Type Here" />
@@ -132,9 +132,9 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                                 <label className='fw-bolder mb-2' htmlFor="number">Question</label>
                                                 <input
                                                     type="text"
-                                                    name="question"
-                                                    id='question'
-                                                    value={formData.personalData.question}
+                                                    name="Question"
+                                                    id='Question'
+                                                    value={formData.personalData.Question}
                                                     onChange={handleDataChange}
                                                     className="form-control border-3 w-100 p-3"
                                                     placeholder="Type Here" />
@@ -166,9 +166,9 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                             <label className='fw-bolder mb-2' htmlFor="date">Date</label>
                                             <input
                                                 type="date"
-                                                name="question"
-                                                id='question'
-                                                value={formData.personalData.question}
+                                                name="Question"
+                                                id='Question'
+                                                value={formData.personalData.Question}
                                                 onChange={handleDataChange}
                                                 className="form-control border-3 w-100 p-3"
                                                 placeholder="Type here" />
@@ -181,9 +181,9 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                             <label className='fw-bolder mb-2' htmlFor="number">Number</label>
                                             <input
                                                 type="number"
-                                                name="question"
-                                                id='question'
-                                                value={formData.personalData.question}
+                                                name="Question"
+                                                id='Question'
+                                                value={formData.personalData.Question}
                                                 onChange={handleDataChange}
                                                 className="form-control border-3 w-100 p-3"
                                                 placeholder="Type here" />
@@ -199,9 +199,9 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                             <label className='fw-bolder mb-2' htmlFor="file">FileUpload</label>
                                             <input
                                                 type="file"
-                                                name="question"
-                                                id='question'
-                                                value={formData.personalData.question}
+                                                name="Question"
+                                                id='Question'
+                                                value={formData.personalData.Question}
                                                 onChange={handleDataChange}
                                                 className='d-flex fw-medium pt-2 pb-2'
                                             />
@@ -209,7 +209,7 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                     </article>)}
 
                                 {typeQuestion === 'Video question' && (
-                                    <article className="card  shadow pt-4 ">
+                                    <article className="card shadow">
                                         <h5 className="card-header bg-info">Video based questions</h5>
                                         <article className="card-body">
                                             <article className='d-flex justify-content-center flex-wrap'>

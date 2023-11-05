@@ -29,7 +29,7 @@ export default function AdditionalForm({ formData, setFormData, handleDataChange
                                 id='Paraghraph'
                                 value={formData.additionalData.Paraghraph}
                                 onChange={handleDataChange}
-                                className={Styles.input}/>
+                                className={Styles.input} />
                         </article>
                         <article className="form-group mb-2">
                             <article className='d-flex'>
@@ -71,12 +71,6 @@ export default function AdditionalForm({ formData, setFormData, handleDataChange
                                 </article>
                             </article>
                             <article className='d-grid'>
-                                <span type='button' className='fw-bold mt-4' style={{ color: '#228B22' }} onClick={questionForm}>
-                                    <Unicons.UilPlus color='#228B22' /> {isActive ? 'Hide a question' : 'Add a question'}
-                                </span>
-                                {isActive && (
-                                    <AddQuestionForm formData={formData} setFormData={setFormData} />
-                                )}
                                 <button type='submit' className='btn btn-success mt-2'>Save</button>
                             </article>
                         </article>

@@ -8,14 +8,14 @@ import AdditionalForm from '../Component/AppForm/AdditionalForm';
 export default function ApplicationForm() {
     const [errorMessage, setErrorMessage] = useState({
         photoData: '',
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        nationality: '',
-        idNumber: '',
-        dateOfBirth: '',
-        gender: '',
+        FirstName: '',
+        LastName: '',
+        Email: '',
+        Phone: '',
+        Nationality: '',
+        IdNumber: '',
+        DateOfBirth: '',
+        Gender: '',
         Education: '',
         Experience: '',
         Resume: '',
@@ -23,16 +23,16 @@ export default function ApplicationForm() {
     const [formData, setFormData] = useState({
         photoData: '',
         personalData: {
-            firstName: '',
-            lastName: '',
-            email: '',
-            phone: '',
-            nationality: '',
-            idNumber: '',
-            dateOfBirth: '',
-            gender: '',
-            typeQuestions: '',
-            question: '',
+            FirstName: '',
+            LastName: '',
+            Email: '',
+            Phone: '',
+            Nationality: '',
+            IdNumber: '',
+            DateOfBirth: '',
+            Gender: '',
+            TypeQuestions: '',
+            Question: '',
         },
         profileData: {
             Education: '',
@@ -62,6 +62,14 @@ export default function ApplicationForm() {
             ...prevData,
             personalData: {
                 ...prevData.personalData,
+                [name]: value,
+            },
+            profileData: {
+                ...prevData.profileData,
+                [name]: value,
+            },
+            additionalData: {
+                ...prevData.additionalData,
                 [name]: value,
             },
         }));
@@ -106,10 +114,10 @@ export default function ApplicationForm() {
                     </article>
                 </article>
                 <article className='d-flex sticky-bottom'>
-                    <article className='position-absolute m-5 bottom-0 end-0'>
+                    <article className='position-fixed m-5 bottom-0 end-0'>
                         <Link to={{ pathname: '/preview', state: { ...formData, photoData: formData.photoData }, }} className='btn btn-success' onClick={handleNextClick}>Next</Link>
                     </article>
-                    <article className='position-absolute m-5 bottom-0 start-0'>
+                    <article className='position-fixed m-5 bottom-0 start-0'>
                         <Link to='/Workflow' className='btn btn-primary'>Previous</Link>
                     </article>
                 </article>
