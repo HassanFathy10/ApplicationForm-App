@@ -221,7 +221,12 @@ export default function AddQuestionForm({ formData, handleDataChange }) {
                                                         </article>
                                                     </article>
                                                     <span className='fw-bolder fs-5'>Tell us about yourself?</span>
-                                                    <textarea className={Styles.input} id="exampleFormControlTextarea1" />
+                                                    <textarea
+                                                        name="Question"
+                                                        id='Question'
+                                                        value={formData.personalData.Question}
+                                                        onChange={handleDataChange}
+                                                        className={Styles.input} />
                                                 </article>
                                                 <article className="form-group mb-2 w-75">
                                                     <article className='d-flex'>
