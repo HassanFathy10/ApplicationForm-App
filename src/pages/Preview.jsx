@@ -27,7 +27,7 @@ export default function Preview() {
                 <ul className="list-group">
                   <li className="list-group-item">
                     {formData?.photoData ? (
-                      <img src={formData.photoData} alt="UploadedImage" style={{ maxWidth: '100%', height: 'auto' }} />
+                      <img src={formData.photoData} alt="UploadedImage" className='d-block m-auto' style={{ maxWidth: '100%', height: 'auto' }} />
                     ) : (
                       <p>No image data available</p>
                     )}</li>
