@@ -41,7 +41,9 @@ export default function ApplicationForm() {
         },
         additionalData: {
             Paraghraph: '',
-            Dropdown:'',
+            Dropdown: '',
+            AdditionalQuestion: '',
+            YesNoQuestions: '',
         }
     });
     const handleDataChange = (event) => {

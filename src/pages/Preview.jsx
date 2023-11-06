@@ -52,7 +52,7 @@ export default function Preview() {
                     <li className="fw-bold list-group-item">Education: <span className='text-success fw-medium'>{formData?.profileData?.Education || 'empty'}</span></li>
                     <li className="fw-bold list-group-item">Experience Years: <span className='text-success fw-medium'>{formData?.profileData?.Experience || 'empty'}</span></li>
                     <li className="fw-bold list-group-item">
-                      Resume: {formData.profileData.ResumeFilePath ? (
+                      Resume: {formData.profileData?.ResumeFilePath ? (
                       <span className='text-success fw-medium'>File Uploaded</span>
                       ) : (
                         <span className='text-success fw-medium'>empty</span>
@@ -62,7 +62,11 @@ export default function Preview() {
                   <ul className='list-unstyled list-group-item'>
                     <li className='text-decoration-underline fw-bold text-info pb-2'>Additional Data:</li>
                     <li className="fw-bold list-group-item">Paraghraph: <span className='text-success fw-medium'>{formData?.additionalData?.Paraghraph || 'empty'}</span></li>
-                    <li className="fw-bold list-group-item">Experience Years: <span className='text-success fw-medium'>{formData?.additionalData?.Experience || 'empty'}</span></li>
+                    <li className="fw-bold list-group-item">Experience Years: <span className='text-success fw-medium'>{formData?.additionalData?.Dropdown || 'empty'}</span></li>
+                    <li className='text-decoration-underline fw-bold text-info pb-2 pt-2'>Questions:</li>
+                    <li className="fw-bold list-group-item">Experience Years: <span className='text-success fw-medium'>{formData?.additionalData?.AdditionalQuestion || 'empty'}</span></li>
+                    <li className="fw-bold list-group-item">Experience Years: <span className='text-success fw-medium'>{formData?.additionalData?.YesNoQuestions || 'empty'}</span></li>
+
                   </ul>
                 </ul>
               </article>

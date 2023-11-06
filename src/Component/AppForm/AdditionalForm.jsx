@@ -13,7 +13,6 @@ export default function AdditionalForm({ formData, handleDataChange }) {
                     <article className="card-body">
                         <article className="form-group mb-2">
                             <article className='d-flex'>
-                                <label className='form-label fw-light mb-1' htmlFor="exampleFormControlTextarea1">Paragraph</label>
                                 <article className="ms-auto">
                                     <span type='button'><Unicons.UilPen /></span>
                                 </article>
@@ -28,7 +27,6 @@ export default function AdditionalForm({ formData, handleDataChange }) {
                         </article>
                         <article className="form-group mb-2">
                             <article className='d-flex'>
-                                <label className='form-label fw-light mb-1' htmlFor="exampleFormControlTextarea1">Dropdown</label>
                                 <article className="ms-auto">
                                     <span type='button'><Unicons.UilPen /></span>
                                 </article>
