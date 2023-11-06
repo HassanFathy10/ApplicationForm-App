@@ -7,7 +7,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import ErrorPage from './pages/ErrorPage';
 import ApplicationInfo from './pages/ApplicationInfo';
 import ProgramDetails from './pages/programDetails';
-import ApplicationForm from './pages/ApplicationForm';
+import ApplicationForm from './pages/applicationform';
 import Workflow from './pages/workflow';
 import Preview from './pages/preview';
 
