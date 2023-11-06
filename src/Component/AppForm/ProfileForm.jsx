@@ -1,13 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Col } from 'react-bootstrap';
 import Styles from './styles.module.css';
 
 
 export default function ProfileForm({ formData, setFormData, handleDataChange, errorMessage }) {
     const [btnActive, setBtnActive] = useState(false);
+    const [selectedResume, setSelectedResume] = useState(null);
+    const fileInputRef = useRef(null);
+
     const toggleForm = () => {
         setBtnActive(!btnActive);
     };
+
+    const handleResumeUpload = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            setSelectedResume(file);
+            setFormData((prevData) => ({
+                ...prevData,
+                profileData: {
+                    ...prevData.profileData,
+                    ResumeFilePath: file,
+                },
+            }));
+        };
+    };
+    
     return (
         <Col md={10} className='pt-5'>
             <article className='col-sm-10'>
@@ -81,9 +99,11 @@ export default function ProfileForm({ formData, setFormData, handleDataChange, e
                                 type="file" 
                                 name='Resume'
                                 id='Resume'
+                                onChange={handleResumeUpload}
+                                ref={fileInputRef}
                                 value={formData.profileData.Resume}
-                                onChange={handleDataChange}
-                                className='fw-medium mt-3' />
+                                className='fw-bold mt-3 text-success' />
+                            {selectedResume && <article className='fw-bold text-white'>{selectedResume.name}</article>}
                             {errorMessage.Resume && <p style={{ color: 'red' }}>{errorMessage.Resume}</p>}
                         </article>
                         <article className='d-grid'>

@@ -6,7 +6,7 @@ import Styles from './styles.module.css';
 
 
 
-export default function PersonalForm({ formData, handleDataChange, errorMessage }) {
+export default function PersonalForm({ formData, setFormData, handleDataChange, errorMessage }) {
     const [isActive, setIsActive] = useState(false);
 
     const questionForm = () => {
@@ -188,7 +188,7 @@ export default function PersonalForm({ formData, handleDataChange, errorMessage 
                         </span>
                         {isActive && (
                             <article>
-                                <AddQuestionForm formData={formData} handleDataChange={handleDataChange} />
+                                <AddQuestionForm formData={formData} setFormData={setFormData} handleDataChange={handleDataChange} />
                             </article>
                         )}
                         <button type='submit' className='btn btn-success mt-2'>Save</button>

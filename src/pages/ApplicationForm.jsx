@@ -37,7 +37,7 @@ export default function ApplicationForm() {
         profileData: {
             Education: '',
             Experience: '',
-            Resume: '',
+            ResumeFilePath: '',
         },
         additionalData: {
             Paraghraph: '',
@@ -96,7 +96,7 @@ export default function ApplicationForm() {
         if (Object.values(newErrorMessages).some((message) => message !== '')) {
             return;
         }
-        navigate('/preview', { state: { ...formData, photoData: formData.photoData } });
+        navigate('/preview', { state: { ...formData, photoData: formData.photoData, ResumeFilePath: 'path/to/your/resume' } });
     };
 
 
