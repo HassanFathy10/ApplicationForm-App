@@ -41,6 +41,7 @@ export default function ApplicationForm() {
         },
         additionalData: {
             Paraghraph: '',
+            Dropdown:'',
         }
     });
     const handleDataChange = (event) => {

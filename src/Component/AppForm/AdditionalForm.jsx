@@ -41,18 +41,6 @@ export default function AdditionalForm({ formData, handleDataChange }) {
                                 <label className='fw-bolder mb-2' htmlFor="text">Question</label>
                                 <input type="text" className="form-control border-3 w-75 p-3" placeholder="Type Here" />
                             </article>
-                            <article className='mb-2'>
-                                <label className='fw-bolder mb-2 ms-5' htmlFor="text">Chioce</label>
-                                <article className='d-flex'>
-                                    <span className='p-3' type="button"><Unicons.UilListUl /></span>
-                                    <span className=' w-75'><input type="text" className="form-control border-3 p-3" placeholder="Type Here" /></span>
-                                    <span className='p-3' type="button"><Unicons.UilPlus /></span>
-                                </article>
-                            </article>
-                            <article className='d-flex mt-4'>
-                                <span type="button" className='fw-medium me-auto' style={{ color: '#FF0800' }}><Unicons.UilTimes color='#FF0800' />Delete question</span>
-                                <button className='btn btn-success'>Save</button>
-                            </article>
                             <article className="form-group mb-2">
                                 <article className='d-flex mt-5'>
                                     <label className='form-label fw-light mb-1' htmlFor="exampleFormControlTextarea1">Yes/No questions</label>
