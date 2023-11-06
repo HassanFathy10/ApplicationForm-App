@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Styles from './style.module.css';
 
 export default function ApplicationInfo() {
     return (
         <article className='container'>
             <article className='row'>
                 <article className='pt-5 d-flex justify-content-center position-relative'>
-                    <img src='../assets/images/workflow-automation-examples.png' alt='' />
+                    <img src='../assets/images/workflow-automation-examples.png' className={`d-block m-auto ${Styles.infoImage}`}  alt='' />
                 </article>
                 <article className='pt-5 p-3 text-start'>
                     <h3 className='text-decoration-underline text-info'>Application Information :</h3>

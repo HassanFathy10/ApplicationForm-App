@@ -4,3 +4,38 @@
     height: 500px;
     width: 100%;
 }
+
+@media  (max-width: 768px) {
+    .workflowImage {
+        width: 35rem;
+    }
+    .infoImage {
+        width: 35rem;
+    }
+}
+
+@media  (max-width: 425px) {
+    .workflowImage {
+        width: 25rem;
+    }
+    .infoImage {
+        width: 25rem;
+    }
+}
+@media  (max-width: 375px) {
+    .workflowImage {
+        width: 20rem;
+    }
+    .infoImage {
+        width: 20rem;
+    }
+}
+
+@media  (max-width: 320px) {
+    .workflowImage {
+        width: 18rem;
+    }
+    .infoImage {
+        width: 18rem;
+    }
+}

@@ -103,7 +103,7 @@ export default function ApplicationForm() {
     return (
         <article className='container'>
             <article className='row'>
-                <article className='d-flex'>
+                <article className='d-flex justify-content-center align-items-center'>
                     <article className='col-lg-10 col-md-10 col-sm-10 mt-5 '>
                         <article className='p-5'>
                             <PhotoForm formData={formData} setFormData={setFormData} handleDataChange={handleDataChange} />

@@ -11,7 +11,8 @@ export default function Preview() {
   const handleSendClick = () => {
     // Your send logic here
     console.log('Sending data:', formData);
-
+    // Clear the data from localStorage
+    localStorage.removeItem('formData');
     // Set showPreview to false to hide the preview
     setShowPreview(false);
   };
@@ -59,8 +60,8 @@ export default function Preview() {
                   </ul>
                 </ul>
               </article>
-              <article className='position-absolute m-5 bottom-0 end-0'>
-                <button type='submit' className='btn btn-success' onClick={handleSendClick}>Send</button>
+              <article className='m-5'>
+                <button type='submit' className='btn btn-success d-block ms-auto' onClick={handleSendClick}>Send</button>
               </article>
             </article>) : (
             <article className='text-center d-grid pt-5'>

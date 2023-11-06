@@ -1,15 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react';
 import { Col } from 'react-bootstrap';
-import AddQuestionForm from './AddQuestionForm';
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './styles.module.css';
 
-export default function AdditionalForm({ formData, setFormData, handleDataChange }) {
-    const [isActive, setIsActive] = useState(false);
+export default function AdditionalForm({ formData, handleDataChange }) {
 
-    const questionForm = () => {
-        setIsActive(!isActive);
-    };
     return (
         <Col md={10} className='pt-5'>
             <article className='col-sm-10'>

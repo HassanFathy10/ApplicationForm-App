@@ -1,16 +1,10 @@
 import React, { useState } from 'react'
 import { Col } from 'react-bootstrap';
-import AddQuestionForm from './AddQuestionForm';
-import * as Unicons from '@iconscout/react-unicons';
 import Styles from './styles.module.css';
 
 
 export default function ProfileForm({ formData, setFormData, handleDataChange, errorMessage }) {
-    const [isActive, setIsActive] = useState(false);
     const [btnActive, setBtnActive] = useState(false);
-    const questionForm = () => {
-        setIsActive(!isActive);
-    }
     const toggleForm = () => {
         setBtnActive(!btnActive);
     };
