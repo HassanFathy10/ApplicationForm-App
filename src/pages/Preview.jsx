@@ -64,8 +64,9 @@ export default function Preview() {
                     <li className="fw-bold list-group-item">Paraghraph: <span className='text-success fw-medium'>{formData?.additionalData?.Paraghraph || 'empty'}</span></li>
                     <li className="fw-bold list-group-item">Experience Years: <span className='text-success fw-medium'>{formData?.additionalData?.Dropdown || 'empty'}</span></li>
                     <li className='text-decoration-underline fw-bold text-info pb-2 pt-2'>Questions:</li>
-                    <li className="fw-bold list-group-item">Experience Years: <span className='text-success fw-medium'>{formData?.additionalData?.AdditionalQuestion || 'empty'}</span></li>
-                    <li className="fw-bold list-group-item">Experience Years: <span className='text-success fw-medium'>{formData?.additionalData?.YesNoQuestions || 'empty'}</span></li>
+                    <li className="fw-bold list-group-item"><span className='text-success fw-medium'>{formData?.additionalData?.AdditionalQuestion || 'empty'}</span></li>
+                    <li className='text-decoration-underline fw-bold text-info pb-2 pt-2'>Yes/No questions:</li>
+                    <li className="fw-bold list-group-item"><span className='text-success fw-medium'>{formData?.additionalData?.YesNoQuestions || 'empty'}</span></li>
 
                   </ul>
                 </ul>

@@ -41,7 +41,7 @@ export default function AdditionalForm({ formData, handleDataChange }) {
                             </article>
                             <article className="form-group mb-2">
                                 <article className='d-flex mt-5'>
-                                    <label className='form-label fw-light mb-1' htmlFor="exampleFormControlTextarea1">Yes/No questions</label>
+                                    <label className='form-label fw-medium mb-1' htmlFor="exampleFormControlTextarea1">Yes/No questions</label>
                                     <article className="ms-auto">
                                         <span type='button'><Unicons.UilPen /></span>
                                     </article>
