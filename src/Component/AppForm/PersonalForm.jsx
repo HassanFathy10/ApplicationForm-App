@@ -191,7 +191,6 @@ export default function PersonalForm({ formData, setFormData, handleDataChange, 
                                 <AddQuestionForm formData={formData} setFormData={setFormData} handleDataChange={handleDataChange} />
                             </article>
                         )}
-                        <button type='submit' className='btn btn-success mt-2'>Save</button>
                     </article>
                 </form>
             </article>

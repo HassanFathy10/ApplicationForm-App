@@ -106,9 +106,6 @@ export default function ProfileForm({ formData, setFormData, handleDataChange, e
                             {selectedResume && <article className='fw-bold text-white'>{selectedResume.name}</article>}
                             {errorMessage.Resume && <p style={{ color: 'red' }}>{errorMessage.Resume}</p>}
                         </article>
-                        <article className='d-grid'>
-                            <button type='submit' className='btn btn-success mt-2'>Save</button>
-                        </article>
                     </article>
                 </article>
             </article>

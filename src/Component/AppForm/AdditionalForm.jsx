@@ -51,9 +51,6 @@ export default function AdditionalForm({ formData, handleDataChange }) {
                                     <input type="text" className={Styles.input} />
                                 </article>
                             </article>
-                            <article className='d-grid'>
-                                <button type='submit' className='btn btn-success mt-2'>Save</button>
-                            </article>
                         </article>
                     </article>
                 </article>
