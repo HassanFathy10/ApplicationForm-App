@@ -4,7 +4,7 @@ import * as Unicons from '@iconscout/react-unicons';
 
 export default function SideBar() {
   return (
-    <article className='container d-block m-sm-auto'>
+    <article className='container d-block m-sm-auto shadow'>
       <article className='row'>
         <article className='d-flex justify-content-center min-vh-100 shadow'>
           <ul className='pt-5 list-unstyled list-group nav-tabs'>
