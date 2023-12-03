@@ -41,7 +41,7 @@ export default function ApplicationForm() {
         },
         additionalData: {
             Paraghraph: '',
-            Dropdown: '',
+            YearsOfExperience: '',
             AdditionalQuestion: '',
             YesNoQuestions: '',
         }
