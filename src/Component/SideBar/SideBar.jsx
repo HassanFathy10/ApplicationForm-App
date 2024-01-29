@@ -30,9 +30,6 @@ export default function SideBar() {
               <Navbar.Collapse id="navbarScroll">
                 <Nav variant='tabs' className="d-flex text-start lh-lg">
                   <Nav.Item className='m-1'>
-                    <Link to='/' className='p-1 nav-link fw-bolder'><Unicons.UilBars size='2.2rem' color='#15A092' /> Menu</Link>
-                  </Nav.Item>
-                  <Nav.Item className='m-1'>
                     <Link to='/' className='p-1 nav-link fw-bolder'><Unicons.UilHome size='2rem' color='#15A092' /> Home</Link>
                   </Nav.Item>
                   <Nav.Item className='m-1'>
